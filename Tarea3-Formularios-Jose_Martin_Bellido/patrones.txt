@@ -1,0 +1,19 @@
+Formulario
+
+-- 1. Usuario - text [A-Za-z0-9]+ maxlength='20'
+		De 1 a 20 caracteres. No admite simbolos, caracteres especiales ni acentos
+-- 2. contraseña - password (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}
+		Debe contener de 8 a 16 caracteres. Debe incluir al menos un símbolo y un carácter especial
+-- 3. Nombre - text [A-ZÁÉÍÓÚa-záéíóú ]+ maxlength='30'
+		De 1 a 30 caracteres. Admite acentos pero no simbolos ni caracteres especiales
+-- 4. direccion - text [A-ZÁÉÍÓÚa-záéíóú ]+ 	
+		Debe contener de 1 a 50 caracteres. Admite acentos pero no simbolos ni caracteres especiales
+-- 5.Email - email [a-z]+@[outlook|hotmail|gmail|yahoo]\.[a-z]{1,3}
+		De 1 a 50 caracteres. Admite acentos pero no simbolos ni caracteres especiales
+
+-- 6. Hobby  - text [A-ZÁÉÍÓÚa-záéíóú ]+
+-- 7. fecha de comienzo de hobby - date
+-- 8. Comparte el hobby con otra persona - RadioButton
+-- 9. Nuevo hobby - select
+-- 10. Lenguajes de programación favoritos - checkbox
+-- 11. Buzón de sugerencias - textarea

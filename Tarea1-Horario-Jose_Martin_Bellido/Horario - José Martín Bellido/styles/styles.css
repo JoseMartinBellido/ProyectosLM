@@ -1,0 +1,127 @@
+/* Ajustes generales  
+    Intento de diseño Responsive. Todo se ajusta al ancho para visualizaciones en tablet o móvil.
+
+    Se ha aplicado el grosor de letra y el tipo para el texto en general.
+    En el body se ha añadido una imagen de fondo y la instrucción de que se repita en scroll.
+
+*/
+
+*{
+    font-weight: 800;
+    font-family: 'Roboto Slab', serif;
+    
+}
+
+body{
+    background-image: url("../images/fondo.jpg");
+    background-repeat:repeat;
+
+}
+
+/* Ajustes del título 
+    El título tiene un tipo de letra único para él, además de un tamaño, alineación al centro y subrayado.
+
+*/
+
+h1{
+    font-family: 'Noto Serif NP Hmong', serif;
+    font-size: 1.8vw ;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+/* Tabla 
+    Tabla y texto alineados, tabla exterior sin bordes, pero filas y celdas con bordes ligeramente curvos y por separado. 
+    Celdas con ancho relativo definido y tamaño de letra. (Tipo de letra en body)
+
+*/
+
+table{
+    border: none;
+    margin:auto;
+}
+
+ tr,td{
+    border: 3.5px black solid;
+    border-collapse: separate;
+    text-align: center;
+    padding: 3px;
+    border-radius: 6%;
+
+}
+
+td{
+    width: 15vw;
+    font-size: 1.4vw;
+}
+
+/* Ajustes de texto especiales 
+    Columna de horas.
+    Días de la semana y descanso con mismo tipo de letra y tamaño.
+    Margenes para el texto de las celdas
+*/
+
+.hora{
+    width:4.5vw;
+    font-size:1.3vw;
+}
+
+.dia-semana, .descanso{
+    font-family: 'Roboto Slab', serif;
+    font-size:1.2vw;
+    padding:3px;
+}
+
+.texto-celdas{
+    margin-top:3px;
+    margin-right:5px;
+    margin-left:5px;
+    margin-bottom: 0px;
+
+}
+
+/* Colores de fondo por asignatura
+    Basado en 2 tríadas de color hechas en adobe colors. Cada color asignado tiene su significado personal.
+*/ 
+
+.ed{
+    background-color: #D6D4FA;
+}
+
+.fol{
+    background-color: #FAF4CF;
+}
+
+.bbdd{
+    background-color: #D4F7FA;
+}
+
+.pr{
+    background-color:#FFDFCC ;
+}
+
+.si{
+    background-color: #D7FACF;
+}
+
+.lm{
+    background-color: #FEE3F3;
+}
+
+/* iconos 
+    Tamaño de iconos definido y bordeados circularmente.
+*/
+
+.ed-img, .fol-img, .bbdd-img, .pr-img, .si-img, .lm-img  {
+    border: 1px black solid;
+    width:1.6vw; 
+    border-radius:50%
+    
+}
+
+.descanso-img{
+    width:1.6vw; 
+}
+
+

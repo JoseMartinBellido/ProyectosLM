@@ -1,0 +1,92 @@
+:root{
+    --colorRojo: #FF0000;
+    --colorVerde: #00FF00;
+    --colorAzul: #0000FF;
+    --colorAmarillo: #FFFF00;
+    --colorNegro: #000000;
+    --colorRosa: #FF00FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(32, 61, 37);
+}
+
+.contenido {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+}
+
+#btnrojo:hover{
+    color: var(--colorRojo);
+}
+
+#btnverde:hover{
+    color: var(--colorVerde);
+}
+
+#btnazul:hover{
+    color:var(--colorAzul);
+}
+
+#btnamarillo:hover{
+    color:var(--colorAmarillo);
+}
+
+#btnreset:hover{
+    color:var(--colorNegro);
+}
+
+#btnrosa:hover{
+    color:var(--colorRosa);
+}
+
+
+input {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(191, 219, 29);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.box {
+    width: 550px;
+    height: 350px;
+    border: 3px groove white;
+    background: #000;
+}
+
+/* CSS para el texto añadido desde javascript */
+.texto{
+    margin-left: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 6rem;
+    text-wrap: wrap;
+    text-align: justify;
+}
+
+/* CSS para la imagen añadida */
+
+.imagen-div img{
+    max-width: 20rem;
+    margin: 2rem;
+}

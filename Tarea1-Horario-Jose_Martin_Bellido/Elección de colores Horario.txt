@@ -1,0 +1,17 @@
+Elección de colores basada en la psicología del color, hallada en la siguiente página:
+
+www.abc.es/bienestar/psicologia-sexo/psicologia/abci-psicologia-color-forma-definen-tonos-vistes-202009060332_noticia.html
+
+Lenguaje de marcas -> rosa (calma) #FEE3F3
+BBDD -> azul claro (confianza y seguridad / frialdad) #D4F7FA
+fol -> amarillo (felicidad convalidacion) #FAF4CF
+
+
+Programación -> naranja (reto) #FFDFCC
+sistemas informaticos -> verde (armonía, paz, esperanza) #D7FACF
+Entornos de desarrollo -> violeta (poder y lujos, precio ides) #D6D4FA
+
+
+Colores escogidos en tríadas gracias a la herramienta Adobe Colors.
+
+

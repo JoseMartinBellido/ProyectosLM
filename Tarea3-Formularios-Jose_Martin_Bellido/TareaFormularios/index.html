@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspiraciones Laborales</title>
+    <meta name="author" content="José Martín Bellido" /> 
+    <meta name="copyright" content="José Martín Bellido" />
+    <meta http-equiv="refresh" content="300">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti&family=Montserrat&family=Mulish:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="inicio">
+        <header>
+            <h1 class="tituloPrincipal">ASPIRACIONES LABORALES</h1>
+
+        </header>
+
+        <main> <!-- Separación de main en 2 columnas: nav y sección -->
+            
+            <nav>
+                <div class="tituloNav">
+                    <h1>Menú de Navegación</h1>
+                </div>
+
+                <a href="#inicio" class="enlaceDiv marcado">
+                    <p>Inicio</p>
+                </a>
+
+                <a href="#formulario1" class="enlaceDiv">
+                    <p>Formulario 1</p>
+                </a>
+
+                <a href="#formulario2" class="enlaceDiv">
+                    <p>Formulario 2</p>
+                </a>
+
+                <div>
+                    <img src="./images/pc.svg" alt="pc" class="iconosNav">
+                    <img src="./images/pantalla.svg" alt="pantalla" class="iconosNav">
+                    <img src="./images/movil.svg" alt="movil" class="iconosNav">
+                </div>
+            
+            </nav> <!-- Fin del nav -->
+
+            <div id="seccion1">
+                <div class ="trabajoDiv"> <!-- Primer div de trabajo -->
+                    <div class="tituloTrabajo">
+                        <h3>BACK END</h3>
+                    </div>
+                    <img src="./images/backend.png" alt="backend" class="imagenTrabajo">
+                    <ul class="descripcionTrabajo">
+                        <li>Opción preferida a corto plazo.</li>
+                        <li>Preferencia por la programación interna.</li>
+                        <li>Me supone un reto personal la solución de problemas.</li>
+                    </ul>
+                </div>
+
+                <div class ="trabajoDiv"> <!-- Segundo div de trabajo -->
+                    <div class="tituloTrabajo">
+                        <h3>FRONT END</h3>
+                    </div>
+                    <img src="./images/frontend.png" alt="backend" class="imagenTrabajo">
+                    <ul class="descripcionTrabajo">
+                        <li>Opción considerada a corto plazo.</li>
+                        <li>Satisfacción visual por un trabajo bien hecho.</li>
+                        <li>Trabajo laborioso que requiere mucha atención.</li>
+                    </ul>
+                </div> 
+
+                <div class ="trabajoDiv"> <!-- Tercer div de trabajo -->
+                    <div class="tituloTrabajo">
+                        <h3>CIBERSEGURIDAD</h3>
+                    </div>
+                    <img src="./images/ciberseguridad.png" alt="backend" class="imagenTrabajo" id="imagenCiberseguridad">
+                    <ul class="descripcionTrabajo">
+                        <li>Opción considerada a largo plazo.</li>
+                        <li>Interés personal por la ciberseguridad.</li>
+                        <li>Interés por la programación interna de los ordenadores.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="piePagina">
+                <img id="copyright" src="./images/copyright.png" alt="copyright">
+                <p>José Martín Bellido. Aspiraciones laborales reservadas.</p>
+            </div>
+
+        </footer>
+
+    </div> <!-- Fin de la página inicio -->
+
+    <div id="formulario1">
+        <header>
+            <h1 class="tituloPrincipal">PRIMER FORMULARIO</h1>
+
+        </header>
+
+        <main>
+            <!-- Separación de main en 2 columnas: nav y sección -->
+            <nav>
+                <div class="tituloNav">
+                    <h1>Menú de Navegación</h1>
+                </div>
+
+                <a href="#inicio" class="enlaceDiv">
+                    <p>Inicio</p>
+                </a>
+
+                <a href="#formulario1" class="enlaceDiv marcado">
+                    <p>Formulario 1</p>
+                </a>
+
+                <a href="#formulario2" class="enlaceDiv">
+                    <p>Formulario 2</p>
+                </a>
+            
+                <div>
+                    <img src="./images/pc.svg" alt="pc" class="iconosNav">
+                    <img src="./images/pantalla.svg" alt="pantalla" class="iconosNav">
+                    <img src="./images/movil.svg" alt="movil" class="iconosNav">
+                </div>
+
+            </nav> <!-- Fin del nav -->
+
+            <form action="#formulario1" id="seccion2"> <!-- Primer formulario. -->
+                <!-- No se establece el method="post" para que no de error la página al darle a enviar, aunque sería lo correcto. -->
+
+                <div class="exteriorForm"> <!-- Nombre de usuario -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <div class="formDiv">
+                        <label for="user">Usuario: </label>
+                        <input type="text" id="user" name="user" pattern="[A-Za-z0-9]+" maxlength='20' placeholder="Usuario" required>
+                        <p>Debe contener de 1 a 20 caracteres.</p>
+                        <p>No puede incluir símbolos ni caracteres especiales</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Contraseña -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <div class="formDiv">
+                        <label for="pass">Contraseña: </label>
+                        <input type="password" id="pass" name="pass" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}" placeholder="Contraseña" minlength = '8' maxlength = '16' required>
+                        <p>Debe contener de 8 a 16 caracteres.</p>
+                        <p>Debe incluir al menos un símbolo y un carácter especial</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"><!-- Nombre -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <div class="formDiv">
+                        <label for="name">Nombre: </label>
+                        <input type="text" pattern="[A-ZÑÁÉÍÓÚ][a-zñáéíóú]+(\s[a-zñáéíóú]+){0,3}(\s[A-ZÑÁÉÍÓÚ][a-zñáéíóú]+)*" maxlength='30' placeholder="Nombre y apellidos" required>
+                        <p>Debe contener de 1 a 30 caracteres.</p>
+                        <p>Admite acentos pero no simbolos ni caracteres especiales</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Dirección -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <div class="formDiv">
+                        <label for="address">Dirección: </label>
+                        <input type="text" pattern="[Calle|Plaza|Carretera|Avenida]\s[A-ZÁÉÍÓÚa-záéíóú\s0-9]+" maxlength='50' placeholder="Dirección completa">
+                        <p>Debe contener de 1 a 50 caracteres.</p>
+                        <p>Admite acentos pero no simbolos ni caracteres especiales</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Email -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <div class="formDiv">
+                        <label for="email">Email: </label>
+                        <input type="email" pattern="[a-z0-9]+@[outlook|hotmail|gmail|yahoo]\.[a-z]{1,3}" maxlength='30' placeholder="correo electrónico">
+                        <p>Puede contener hasta 30 caracteres.</p>
+                        <p>Solo admite letras en minúscula además de los símbolos especiales necesarios.</p>
+                    </div>
+                </div>
+
+                <div class="politicaPrivacidad">
+                    <input type="checkbox" id="privacidadCheckBox" name="privacidad" required> 
+                    <label for="privacidad" id="privacidadLabel">Consiento el tratamiento de mis datos personales con el fin exclusivo al que va destinado este formulario</label>
+                     
+                </div>
+
+                <input type="submit" name="Enviar" id="botonEnviar">
+            </form> <!-- Fin del primer formulario (seccion2)-->
+
+        </main>
+
+        <footer>
+            <div class="piePagina">
+                <img id="copyright" src="./images/copyright.png" alt="copyright">
+                <p>José Martín Bellido. Aspiraciones laborales reservadas.</p>
+            </div>
+
+        </footer>
+    </div> <!-- Fin del div con id="formulario1" -->
+
+
+    <div id="formulario2">
+        <header>
+            <h1 class="tituloPrincipal">SEGUNDO FORMULARIO</h1>
+
+        </header>
+
+        <main>
+            <!-- Separación de main en 2 columnas: nav y sección -->
+            <nav>
+                <div class="tituloNav">
+                    <h1>Menú de Navegación</h1>
+                </div>
+
+                <a href="#inicio" class="enlaceDiv">
+                    <p>Inicio</p>
+                </a>
+
+                <a href="#formulario1" class="enlaceDiv">
+                    <p>Formulario 1</p>
+                </a>
+
+                <a href="#formulario2" class="enlaceDiv marcado">
+                    <p>Formulario 2</p>
+                </a>
+            
+                <div>
+                    <img src="./images/pc.svg" alt="pc" class="iconosNav">
+                    <img src="./images/pantalla.svg" alt="pantalla" class="iconosNav">
+                    <img src="./images/movil.svg" alt="movil" class="iconosNav">
+                </div>
+
+            </nav> <!-- Fin del nav -->
+
+            <form action="#formulario2" id="seccion3"> <!-- Segundo formulario. id="seccion3" -->
+                <!-- No se establece el method="post" para que no de error la página al darle a enviar, aunque sería lo correcto. -->
+
+                <div class="exteriorForm"> <!-- Hobby Preferido -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #hobbyDiv para trabajar sobre cualidades específicas de este div -->
+                    <div class="formDiv" id="hobbyDiv"> 
+                        <label for="hobby" id="hobbyLabel">Hobby: </label>
+                        <input type="text" name="hobby" id="hobbyInput" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú\s]+" placeholder="Hobby">
+                        <p id="hobbyDescripcion">Indique en el recuadro su hobby preferido.</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Fecha de comienzo de Hobby -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #hobbyDiv para trabajar sobre cualidades específicas de este div -->
+                    <div class="formDiv" id="fechaComienzoDiv">
+                        <label for="fechaComienzo">Fecha de comienzo: </label>
+                        <input type="date" name="fechaComienzo" id= fechaComienzoInput>
+                        <p>Introduzca la fecha en la que empezó a tener su hobby o afición.</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Compartir hobby con alguien -->
+                    
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #compartirHobbyDiv para trabajar sobre cualidades específicas de este div-->
+                    <div class="formDiv" id="compartirHobbyDiv"> 
+                        <label for="compartirHobby" id="tituloRadio" size="8">¿Comparte su hobby con alguien? </label>
+                        <div class="radios"> <!-- Div para los radioButtons -->
+                            <input type="radio" id="si" name="compartirHobby" value="si">
+                            <label for="si" size="8" class="radioLabel">Sí</label>
+                            <input type="radio" id="no" name="compartirHobby" value="no">
+                            <label for="no" size="8" class="radioLabel">No</label>
+                            <input type="radio" id="noContesta" name="compartirHobby" value="noContesta">
+                            <label for="noContesta" size="8" class="radioLabel">No contesta</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Elección de un nuevo hobby o afición para comenzar -->
+                    
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #selectDiv para trabajar sobre cualidades específicas de este div-->
+                    <div class="formDiv" id="selectDiv">
+
+                        <label for="nuevaAficion">Nueva afición: </label>
+
+                        <select type="select" name="nuevaAficion" id= "nuevaAficionSelect"> <!-- Comienzo del select -->
+                            <option value="ninguna">----------------- Ninguna -----------------</option>
+                            <option value="lectura">Lectura</option>
+                            <option value="escritura">Escritura</option>
+                            <option value="cocina">Cocina</option>
+                            <option value="tocarInstrumento">Tocar un instrumento</option>
+                            
+                            <option value="deporte">Realizar un deporte nuevo</option>
+                            <option value="bailar">Bailar</option>
+                            <option value="viajar">Viajar</option>
+                            <option value="cineSeries">Ver cine y/o series</option>
+                            <option value="pintar">Pintar y/o dibujar</option>
+                            
+                            <option value="bricolaje">Bricolaje</option>
+                            <option value="manualidades">Realizar manualidades</option>
+                            <option value="meditacion">Meditación</option>
+                            <option value="jardineria">Jardinería</option>
+                            <option value="juegosLogica">Juegos de lógica (ajedrez, puzzles...)</option>
+
+                        </select> <!-- Fin del select -->
+                        <p>Seleccione una nueva afición que le gustaría aprender o tener.</p>
+                    </div>
+                </div>
+
+                <div class="exteriorForm"> <!-- Lenguajes de programación favoritos -->
+                    
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #lenguajesProgramacionDiv para trabajar sobre cualidades específicas de este div-->
+                    <div class="formDiv" id="lenguajesProgramacionDiv"> 
+
+                        <label for="favoriteProgrammingLanguage" id="tituloCheckbox" size="8">Lenguajes de programación favoritos: </label>
+
+                        <div class="checkBoxDiv"> <!-- Div para los CheckBox -->
+                            <div class="opcionBox">
+                                <input type="checkbox" id="html" name="html">
+                                <label for="html" class="checkLabel" id="htmlLabel">HTML</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="css" name="css">
+                                <label for="css" class="checkLabel">CSS</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="javascript" name="javascript">
+                                <label for="javascript" class="checkLabel">JavaScript</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="php" name="php" value="php">
+                                <label for="php" class="checkLabel">PHP</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="java" name="java" value="java">
+                                <label for="java" class="checkLabel">Java</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="python" name="python">
+                                <label for="python" class="checkLabel" id="pythonLabel">Python</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="c" name="c">
+                                <label for="c" class="checkLabel" id="cLabel">C</label>
+                            </div>
+                            <div class="opcionBox">
+                                <input type="checkbox" id="c++" name="c++">
+                                <label for="c++" class="checkLabel">C++</label>   
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div> <!-- Fin del checkbox-->
+
+                <div class="exteriorForm"> <!-- Sugerencias -->
+                    <img src="./images/iconoArchivo.svg" alt="archivo" class="iconoArchivo">
+                    <!-- Asociamos el id #buzonSugerenciasDiv para trabajar sobre cualidades específicas de este div-->
+
+                    <div class="formDiv" id="buzonSugerenciasDiv">
+                        <label for="buzonSugerencias" id="tituloBuzonSugerencias">Buzón de sugerencias: </label>
+                        <textarea name="buzonSugerencias" id="buzonSugerenciasText" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú\s]+" placeholder="Indique aquí cualquier sugerencia."></textarea>
+                        
+                    </div>
+
+                </div>
+
+                <div class="politicaPrivacidad">
+                    <input type="checkbox" name="privacidad" required> 
+                    <label for="privacidad" id="privacidadLabel">Consiento el tratamiento de mis datos personales con el fin exclusivo al que va destinado este formulario</label>
+                     
+                </div>
+
+                <input type="submit" name="Enviar" id="botonEnviar">
+            </form> <!-- Fin de la sección3 -->
+
+        </main>
+
+        <footer>
+            <div class="piePagina">
+                <img id="copyright" src="./images/copyright.png" alt="copyright">
+                <p>José Martín Bellido. Aspiraciones laborales reservadas.</p>
+            </div>
+
+        </footer>
+    </div> <!-- Fin del div con id="formulario2"-->
+</body>
+</html>
