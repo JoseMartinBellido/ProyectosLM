@@ -10,6 +10,8 @@
 
 </head>
 <body>
+    <h1>título de la página web</h1>
+    <div id="contenedor-parrafo"></div>
     <div class="contenido"> 
         <section class="botones">
             <input type="button" value="rojo" id="btnrojo">
@@ -21,11 +23,29 @@
             <input type="button" value="reset" id="btnreset">
 
         </section>
-        <div class="box">
-        </div>
+        <div class="box"></div>
+
+        <!-- Div para la nueva imagen -->
         <div class="imagen-div">
-            <img src="./images/backend.png" alt="imagen-back-end">
+            <img id="imagen" src="./images/backend.png" alt="imagen-back-end">
+            <input type="button" value="girar +90º" id="btn-girar-der">
+            <input type="button" value="imagen recta" id="btn-recto">
+            <input type="button" value="girar -90º" id="btn-girar-izq">
         </div>
+
+        <!-- Div para la fecha y hora -->
+        <div class="contenedor">
+            <div class="div-fecha">
+                <h2 id="titulo-fecha">reloj</h2>
+                <div id="hora"></div>
+                <div id="fecha"></div>
+                <div id="dia-mes"></div>
+            </div>
+            <div class="div-tamanio">
+                <textarea cols="30" rows="10" id="cuadro"></textarea>
+            </div>
+        </div>
+        
     </div>
     <script src="js/changecolor.js"></script>
 </body>

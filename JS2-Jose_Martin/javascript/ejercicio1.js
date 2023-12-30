@@ -8,16 +8,16 @@ HAY QUE HACERLO CON OBJETOS */
 let numero;
 
 let objetoNumeros = {
-    uno: 'primero',
-    dos: 'segundo',
-    tres: 'tercero',
-    cuatro: 'cuarto',
-    cinco: 'quinto',
-    seis: 'sexto',
-    siete: 'séptimo',
-    ocho: 'octavo',
-    nueve: 'noveno',
-    diez: 'décimo'
+    '1': 'primero',
+    '2': 'segundo',
+    '3': 'tercero',
+    '4': 'cuarto',
+    '5': 'quinto',
+    '6': 'sexto',
+    '7': 'séptimo',
+    '8': 'octavo',
+    '9': 'noveno',
+    '10': 'décimo'
 }
 
 // Solicitamos el número mientras que sea mayor que 0 y menor o igual que 10
@@ -27,8 +27,7 @@ do{
     // Si el número no es un espacio en blanco, continuamos el método
     if (numero !== ''){
         // En este caso, convertimos a número y comprobamos que no es NaN y que es un entero
-        numero = Number(numero);
-        if (!isNaN(numero) && isInt(numero)) {
+        if (!isNaN(Number(numero)) && isInt(Number(numero))) {
 
             let objetoNumeros = {
                 textoObjeto:`${numero} : ${obtenerCardinal(numero)}`
@@ -38,7 +37,7 @@ do{
         }
 
     }
-} while (numero > 0 && numero < 11);
+} while (Number(numero) > 0 && Number(numero) < 11);
 
 
 // Función que devuelve un true si un número es entero, false si no lo es
@@ -49,31 +48,12 @@ function isInt(n) {
 
 function obtenerCardinal(numero){
 
-    switch(numero){
-        case 1:
-            return objetoNumeros.uno;
-        case 2:
-            return objetoNumeros.dos;
-        case 3:
-            return objetoNumeros.tres;
-        case 4:
-            return objetoNumeros.cuatro;
-        case 5:
-            return objetoNumeros.cinco;
-        case 6:
-            return objetoNumeros.seis;
-        case 7:
-            return objetoNumeros.siete;
-        case 8:
-            return objetoNumeros.ocho;
-        case 9:
-            return objetoNumeros.nueve;
-        case 10:
-            return objetoNumeros.diez;
-        default:
-            return 'Número fuera de rango. Saliendo del programa.';
+    for (let objeto in objetoNumeros){
+        if (numero == objeto){
+            return objetoNumeros[numero];
+        }
     }
-
+    return 'Número fuera de rango. Saliendo del programa.';
 }
 
 

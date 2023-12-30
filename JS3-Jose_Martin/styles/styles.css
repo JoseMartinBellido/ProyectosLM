@@ -17,8 +17,8 @@ body {
 }
 
 .contenido {
-    width: 100vw;
-    height: 100vh;
+    width: 97.8vw;
+    height: calc(100vh - 12rem - 4px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,31 +28,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-#btnrojo:hover{
-    color: var(--colorRojo);
-}
-
-#btnverde:hover{
-    color: var(--colorVerde);
-}
-
-#btnazul:hover{
-    color:var(--colorAzul);
-}
-
-#btnamarillo:hover{
-    color:var(--colorAmarillo);
-}
-
-#btnreset:hover{
-    color:var(--colorNegro);
-}
-
-#btnrosa:hover{
-    color:var(--colorRosa);
-}
-
 
 input {
     width: 80px;
@@ -79,14 +54,95 @@ input {
     background-color: white;
     border-radius: 5px;
     padding: 1rem;
-    width: 6rem;
+    width: 80%;
     text-wrap: wrap;
     text-align: justify;
+    height: 1rem;
 }
 
 /* CSS para la imagen añadida */
 
-.imagen-div img{
+#imagen{
+    width:100%;
+    height: 100%;
+    border: 4px black solid;
+}
+
+.imagen-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     max-width: 20rem;
+    max-height: auto;
     margin: 2rem;
+}
+
+.imagen-div input{
+    width: 100px;
+}
+
+/* Estilos para el título de la página web */
+
+h1{
+    height: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    background-color: rgb(27, 52, 31);
+    color: white;
+}
+
+/* Estilos para el contenedor del párrafo añadido */
+
+#contenedor-parrafo{
+    margin-top: 2rem;
+}
+
+/* Div del reloj y del cuadro de tamaño */
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contenedor div{
+    margin: 1rem;
+}
+
+/* RELOJ */
+
+.div-fecha{
+    border: 2px black solid;
+    border-radius: 5px;
+    color: white;
+    padding: 0.7rem;
+}
+
+#titulo-fecha{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    width: 15rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#titulo-fecha div{
+    width: 15rem;
+    text-align: center;
+}
+
+.texto-fecha {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Div que contendrá el tamaño del mismo al modificarse */
+#cuadro{
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 8rem;
 }
