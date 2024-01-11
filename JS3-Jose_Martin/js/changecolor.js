@@ -109,7 +109,7 @@ btnReset.addEventListener('mouseout', (evento) => ratonFuera(evento));
 
 // Apartado 1.b. Añadimos un párrafo desde js
 const texto = document.createElement('P');
-texto.textContent = 'Este es un nuevo párrafo añadido.';
+texto.textContent = 'Este es un nuevo párrafo añadido desde JavaScript.';
 texto.classList.add('texto');
 
 const contenedorParrafo = document.getElementById('contenedor-parrafo');
@@ -132,6 +132,16 @@ function giraIzquierda(elemento) {
   btnGirarDer.style.marginTop = '6rem';
 }
 
+function cambia(elemento) {
+  if(sourceSeleccionada == 1) {
+    elemento.src = imgSource2;
+    sourceSeleccionada = 2;
+  } else {
+    elemento.src = imgSource1;
+    sourceSeleccionada = 1;  
+  }
+}
+
 const btnGirarDer = document.getElementById('btn-girar-der');
 btnGirarDer.addEventListener('click', () => giraDerecha(imagenNueva));
 
@@ -140,6 +150,13 @@ btnRecto.addEventListener('click', () => ponRecto(imagenNueva));
 
 const btnGirarIzq = document.getElementById('btn-girar-izq');
 btnGirarIzq.addEventListener('click', () => giraIzquierda(imagenNueva));
+
+const btnCambiar = document.getElementById('btn-cambiar');
+let sourceSeleccionada = 1;
+const imgSource1 = '../images/backend.png';
+const imgSource2 = '../images/otraImagen.jpg';
+btnCambiar.addEventListener('click', () => cambia(imagenNueva))
+
 
 // ------------------ Ejercicio 2. Fecha y hora actuales  ------------------
 
@@ -214,16 +231,20 @@ let timerRedireccionEmergente = setInterval(() => {
 let cuadro = document.getElementById('cuadro');
 
 // Alto y ancho del cuadro. Creación de la función que se usará en el observer
-let alto, ancho;
+let alto, ancho, altoViewport, anchoViewport;
 
 function valoresTamanio() {
   alto = cuadro.offsetHeight;
   ancho = cuadro.offsetWidth;
-  cuadro.textContent = `Tamaño: ${alto}px x ${ancho}px`;
+  altoViewport = window.innerHeight;
+  anchoViewport = window.innerWidth;
+  
+  cuadro.textContent = `Tamaño del cuadro: ${alto}px x ${ancho}px\nTamaño del viewpowrt: ${altoViewport}px x ${anchoViewport}px`;
 }
-
+// Observer para la modificación del tamaño del cuadro
 let observer = new ResizeObserver(valoresTamanio);
-
 observer.observe(cuadro);
 
+// Evento para la modificación de la ventana e información en el cuadro
+window.addEventListener('resize', valoresTamanio);
 
