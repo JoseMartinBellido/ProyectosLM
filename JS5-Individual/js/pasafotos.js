@@ -90,11 +90,13 @@ btnContinuar.addEventListener('click', () => playStop(true));
 
 let btnBright = document.getElementById('btn-modo-dia'); 
 let btnDark = document.getElementById('btn-modo-oscuro');
-document.cookie = 'user=jose';
 
 // Comprobación de una cookie anterior para la página web
+if (document.cookie != ''){
+    
+}
 for (let cookies of document.cookie.split(';')){
-    if (cookies.includes('mode')){
+    if (cookies.equals('mode')){
         let modo = cookies.split('=')[1];
         cambioModo(modo);
     }

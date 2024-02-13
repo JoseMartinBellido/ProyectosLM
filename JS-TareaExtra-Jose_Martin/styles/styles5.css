@@ -23,11 +23,30 @@ header{
     height: 12vh;
 
     display: grid;
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+    gap: 1rem
+}
+
+#inicio, #reset{
+    height: 80%;
+    width: 100%;
+
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: var(--color-secundario);
+    color:var(--color-principal);
+    font-size: 1rem;
+}
+
+#inicio:hover, #reset:hover{
+    cursor: pointer;
+    color:black;
+    background-color: var(--color-principal);
 }
 
 header p{
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 nav img{
@@ -80,4 +99,11 @@ nav a:hover {
     color: white;
 }
 
-/* Estilos del ejercicio 3 y 4 propios */
+/* Estilos del ejercicio 5 */
+
+main{
+    position: relative;
+    height: calc(100vh - 12vh - 6vh - 3rem);
+    background-color: rgb(220, 218, 218);
+}
+

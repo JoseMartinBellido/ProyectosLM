@@ -1,0 +1,91 @@
+:root {
+    --fuente-principal: 'Roboto Condensed', sans-serif;
+    --color-principal: #bfd4dd;
+    --color-secundario: #434D52;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(224, 223, 223);
+    height: 100vh;
+    font-family: var(--fuente-principal);
+
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+
+main{
+    height: 100vh;
+
+    position: relative;
+}
+
+/* Estilos para el nav */
+
+#en-blanco, nav{
+    height: 80vh;
+}
+
+nav {
+    background-color: var(--color-principal);
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 2px black solid;
+    border-radius: 5px;
+    margin: auto;
+
+    display:none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 0.3rem;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--color-secundario);
+    color: white;
+    transition-duration: 0.35s;
+}
+
+#emergente{
+    position: absolute;
+    width: 70px;
+    text-align: center;
+
+    border: 2px black solid;
+    border-radius: 8px;
+    margin: auto;
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.35s;
+
+    /* Shadow */
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+#emergente:hover{
+    background-color: var(--color-secundario);
+    color:white;
+}
+
+
+

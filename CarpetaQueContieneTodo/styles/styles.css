@@ -1,0 +1,51 @@
+*{
+    --fondo: #E5E3CF;
+    --color-principal: #666129;
+    --color-secundario: #635291; 
+}
+
+body{
+    background-color: var(--fondo);
+}
+
+header{
+    height: 7rem;
+}
+
+nav{
+    height: 3rem;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    height: 20rem;
+}
+
+.boton{
+    width: 5rem;
+    height: 2rem;
+    display: block;
+    margin: auto;
+}
+
+#botones{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+    height: 70%;
+}
+
+#imagen{
+    width: 100%;
+    height: 100%;
+    border: 4px black solid;
+}
+
+#reloj{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -57,12 +57,12 @@ function setColor(evento) {
 }
 
 // Refactorización del ejercicio. Eventos de click en los botones
-btnRojo.addEventListener('click', (evento) => setColor(evento));
-btnAzul.addEventListener('click', (evento) => setColor(evento));
-btnAmarillo.addEventListener('click', (evento) => setColor(evento));
-btnVerde.addEventListener('click', (evento) => setColor(evento));
-btnRosa.addEventListener('click', (evento) => setColor(evento));
-btnReset.addEventListener('click', (evento) => setColor(evento));
+btnRojo.addEventListener('click', setColor);
+btnAzul.addEventListener('click', setColor);
+btnAmarillo.addEventListener('click', setColor);
+btnVerde.addEventListener('click', setColor);
+btnRosa.addEventListener('click', setColor);
+btnReset.addEventListener('click', setColor);
 
 // Función para cuando el ratón entra por encima del botón
 function ratonSobre(evento) {
@@ -88,48 +88,97 @@ function ratonFuera(evento) {
   if (botones.indexOf(btnSeleccionado) != colores.indexOf(colorBox)) btnSeleccionado.style.color = colorNegro;
 }
 
+// Función para cuando el ratón está haciendo click encima del botón
+function ratonClickando(evento){
+  let btnSeleccionado = botones.find(element => element == evento.currentTarget);
+  // Encontramos el botón sobre el que pasa el ratón y el color asignado
+  let colorSeleccionado = colores[(botones.indexOf(btnSeleccionado))];
+
+  // Una vez encontrados, modificamos las propiedades de estilo:
+  for (let btn of botones) {
+    if (btn == btnSeleccionado) {
+      btn.style.backgroundColor = colorSeleccionado;
+      if (btn != btnReset){
+        btn.style.color = 'black';
+      } else {
+        btn.style.color = 'white';
+      }
+
+    }
+  }
+}
+
+function ratonDejaClick(evento){
+  let btnSeleccionado = botones.find(element => element == evento.currentTarget);
+  // Encontramos el botón sobre el que pasa el ratón y el color asignado
+  let colorSeleccionado = colores[(botones.indexOf(btnSeleccionado))];
+
+  // Una vez encontrados, modificamos las propiedades de estilo:
+  for (let btn of botones) {
+    if (btn == btnSeleccionado) {
+      btn.style.color = colorSeleccionado;
+      btn.style.backgroundColor = 'rgb(191, 219, 29)';
+    }
+  }
+}
+
 // Agregamos los eventos para cada botón cuando se pasa por encima
-btnRojo.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnRojo.addEventListener('mouseout', (evento) => ratonFuera(evento));
+for (let btn of botones){
+  btn.addEventListener('mouseover', ratonSobre);
+  btn.addEventListener('mouseout', ratonFuera);
+  btn.addEventListener('mousedown', ratonClickando);
+  btn.addEventListener('mouseup', ratonDejaClick);
+}
 
-btnAzul.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnAzul.addEventListener('mouseout', (evento) => ratonFuera(evento));
 
-btnAmarillo.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnAmarillo.addEventListener('mouseout', (evento) => ratonFuera(evento));
+// ------------------ Ejercicio 6. Añadimos un botón para hacer desaparecer el párrafo ------------------
+let mostrado = true;
+const contenedorParrafo = document.getElementById('contenedor-parrafo');
 
-btnVerde.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnVerde.addEventListener('mouseout', (evento) => ratonFuera(evento));
+const btnDesapareceTexto = document.createElement('BUTTON');
+btnDesapareceTexto.classList.add('boton-desaparece-texto');
+btnDesapareceTexto.textContent = 'Mostrar/Ocultar';
+contenedorParrafo.appendChild(btnDesapareceTexto);
 
-btnRosa.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnRosa.addEventListener('mouseout', (evento) => ratonFuera(evento));
+btnDesapareceTexto.addEventListener('click', muestraOcultaTexto);
 
-btnReset.addEventListener('mouseover', (evento) => ratonSobre(evento));
-btnReset.addEventListener('mouseout', (evento) => ratonFuera(evento));
+function muestraOcultaTexto(){
+  if (mostrado){
+    texto.style.display = 'none';
+    mostrado = false;
+  } else{
+    texto.style.display = 'inline';
+    mostrado = true;
+  }
+}
 
 // Apartado 1.b. Añadimos un párrafo desde js
 const texto = document.createElement('P');
 texto.textContent = 'Este es un nuevo párrafo añadido desde JavaScript.';
 texto.classList.add('texto');
 
-const contenedorParrafo = document.getElementById('contenedor-parrafo');
 contenedorParrafo.appendChild(texto);
 
+
+
 // Apartado 1.d. Elegimos los botones de transformación de la imagen y le añadimos alguna funcionalidad. 
-// Además, cada botón anterior cambia el borde de la misma
+// Además, cada botón anterior cambia el borde de la misma.
+
+// ------------------ Ejercicio 5. Al pulsar los botones, desaparecen  ------------------
+
 function giraDerecha(elemento) {
   elemento.style.transform = 'rotate(90deg)';
-  btnGirarDer.style.marginTop = '6rem';
+  btnGirarDer.style.display = 'none';
 }
 
 function ponRecto(elemento) {
   elemento.style.transform = 'rotate(0deg)';
-  btnGirarDer.style.marginTop = '2rem';
+  btnRecto.style.display = 'none';
 }
 
 function giraIzquierda(elemento) {
   elemento.style.transform = 'rotate(-90deg)';
-  btnGirarDer.style.marginTop = '6rem';
+  btnGirarIzq.style.display = 'none';
 }
 
 function cambia(elemento) {
@@ -153,8 +202,8 @@ btnGirarIzq.addEventListener('click', () => giraIzquierda(imagenNueva));
 
 const btnCambiar = document.getElementById('btn-cambiar');
 let sourceSeleccionada = 1;
-const imgSource1 = '../images/backend.png';
-const imgSource2 = '../images/otraImagen.jpg';
+const imgSource1 = './images/backend.png';
+const imgSource2 = './images/otraImagen.jpg';
 btnCambiar.addEventListener('click', () => cambia(imagenNueva))
 
 
@@ -225,7 +274,7 @@ let timerRedireccionEmergente = setInterval(() => {
 }, 1000 * 60 * 3);
 
 
-// Ejercicio 4. Cuadro que indique su tamaño al modificarse
+// ------------------ Ejercicio 4. Cuadro que indique su tamaño al modificarse ------------------
 
 // Cuadro que variará su tamaño: textarea
 let cuadro = document.getElementById('cuadro');
@@ -248,3 +297,21 @@ observer.observe(cuadro);
 // Evento para la modificación de la ventana e información en el cuadro
 window.addEventListener('resize', valoresTamanio);
 
+// ------------------ Ejercicio 7. Botones que pierden la funcionalidad ------------------
+
+// Botones
+const btnUnaVez = document.getElementById('una-vez');
+const btnSiempre = document.getElementById('siempre');
+
+// Añadimos un evento sobre el botón que va a funcionar siempre
+btnSiempre.addEventListener('click', () => alert('Este mensaje va a funcionar siempre'));
+
+// Añadimos dos eventos sobre el botón, aunque el segundo evento solo funcionará una vez
+btnUnaVez.addEventListener('click', () => alert('Primer mensaje que sale siempre'));
+btnUnaVez.addEventListener('click', segundoMensaje);
+
+// Función que imprime el segundo mensaje la primera vez, y a la vez elimina el Listener
+function segundoMensaje(){
+  alert('Segundo mensaje que sale solo la primera vez');
+  btnUnaVez.removeEventListener('click', segundoMensaje);
+}
