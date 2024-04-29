@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cambiar colores de un DIV</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+</head>
+<body>
+    <header>
+        <input type="button" value="Siempre" id="siempre">
+        <input type="button" value="Una vez" id="una-vez">
+    </header>
+    <h1>título de la página web</h1>
+    <div id="contenedor-parrafo"></div>
+    <div class="contenido"> 
+        <section class="botones">
+            <input type="button" value="rojo" id="btnrojo">
+            <input type="button" value="verde" id="btnverde">
+            <input type="button" value="azul" id="btnazul">
+            <input type="button" value="amarillo" id="btnamarillo">
+            <!-- Nuevo botón morado -->
+            <input type="button" value="rosa" id="btnrosa">
+            <input type="button" value="reset" id="btnreset">
+
+        </section>
+        <div class="box"></div>
+
+        <!-- Div para la nueva imagen -->
+        <div class="imagen-div">
+            <img id="imagen" src="./images/backend.png" alt="imagen-back-end">
+            <input type="button" value="girar +90º" id="btn-girar-der">
+            <input type="button" value="imagen recta" id="btn-recto">
+            <input type="button" value="girar -90º" id="btn-girar-izq">
+            <input type="button" value="cambiar" id="btn-cambiar">
+            
+        </div>
+
+        <!-- Div para la fecha y hora -->
+        <div class="contenedor">
+            <div class="div-fecha">
+                <h2 id="titulo-fecha">reloj</h2>
+                <div id="hora"></div>
+                <div id="fecha"></div>
+                <div id="dia-mes"></div>
+            </div>
+            <div class="div-tamanio">
+                <textarea cols="30" rows="10" id="cuadro"></textarea>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/changecolor.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+ <html>
+
+<head>
+    <title> Practica - Horario</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- Enlaces para las 3 fuentes distintas usadas de Google Fonts   -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Noto+Serif+NP+Hmong:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <h1>Horario - 1º Desarrollo de Aplicaciones Multiplataforma</h1>
+
+    <!-- Código para la tabla:
+        En la etiqueta th (header) están los nombres de la semana con la clase dia-semana.
+
+        Los td o celdas están etiquetadas con la clase "hora" para la columna izquierda, las abreviaturas de las asignaturas (ed, fol, bbdd, pr, si, lm)
+        o "descanso" para el recreo.
+
+        Cada asignatura tiene asignado su icono.
+
+        Cada icono tiene asignado la clase con nombre abreviatura-img. Por ejemplo, el icono de lenguaje de marcas es "lm-img".
+
+        Cada texto de asignatura tiene asignada la clase "texto-celdas".
+        
+        Se ha aplicado "rowspan" a las asignaturas que recogen varias horas y "colspan" para el recreo.
+    -->
+
+    <table>
+        <th>
+            <td class="dia-semana">Lunes</td>
+            <td class="dia-semana">Martes</td>
+            <td class="dia-semana">Miércoles</td>
+            <td class="dia-semana">Jueves</td>
+            <td class="dia-semana">Viernes</td>
+        </th>
+        <tr>
+            <td class="hora">8:15   9:15</td>
+            <td class="ed">
+                <p class="texto-celdas">Entornos de Desarrollo</p>
+                <img src="./images/ed-adjust.png" class="ed-img">
+
+            </td>
+            <td class="fol">
+                <p class="texto-celdas">Formación y Orientación Laboral</p>
+                <img src="./images/fol-edificio.png" class="fol-img">
+            </td>
+            <td rowspan="2" class="ed">
+                <p class="texto-celdas">Entornos de Desarrollo</p>
+                <img src="./images/ed-adjust.png" class="ed-img">
+            </td>
+            <td rowspan="2" class="fol">
+                <p class="texto-celdas">Formación y Orientación Laboral</p>
+                <img src="./images/fol-edificio.png" class="fol-img">
+            </td>
+            <td rowspan="2" class="bbdd">
+                <p class="texto-celdas">Bases de Datos</p>
+                <img src="./images/bbdd-mysql.png" class="bbdd-img">
+            </td>
+        </tr>
+        <tr>
+            <td class="hora">9:15  10:15</td>
+            <td rowspan="2" class="pr">
+                <p class="texto-celdas">Programación</p>
+                <img src="./images/java-api.png" class="pr-img">
+            </td>
+            <td rowspan="2" class="si">
+                <p class="texto-celdas">Sistemas Informáticos</p>
+                <img src="./images/si-pc.png" class="si-img">
+            </td>
+        </tr>
+        <tr>
+            <td class="hora">10:15  11:15</td>
+            <td class="si">
+                <p class="texto-celdas">Sistemas Informáticos</p>
+                <img src="./images/si-pc.png" class="si-img">
+            </td>
+            <td class="bbdd">
+                <p class="texto-celdas">Bases de Datos</p>
+                <img src="./images/bbdd-mysql.png" class="bbdd-img">
+            </td>
+            <td class="si">
+                <p class="texto-celdas">Sistemas Informáticos</p>
+                <img src="./images/si-pc.png" class="si-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="hora">11:15  11:45</td>
+            <td colspan="5" class="descanso">
+                <img src="./images/confetti.png" class="descanso-img">
+                <img src="./images/balloon.png" class="descanso-img">
+                Descanso
+                <img src="./images/balloon.png" class="descanso-img">
+                <img src="./images/confetti.png" class="descanso-img">
+                </td>
+        </tr>
+
+        <tr>
+            <td class="hora">11:45  12:45</td>
+            <td rowspan="2" class="bbdd">
+                <p class="texto-celdas">Bases de Datos</p>
+                <img src="./images/bbdd-mysql.png" class="bbdd-img">
+            </td>
+            <td rowspan="3" class="pr">
+                <p class="texto-celdas">Programación</p>
+                <img src="./images/java-api.png" class="pr-img">
+            </td>
+            <td class="si">
+                <p class="texto-celdas">Sistemas Informáticos</p>
+                <img src="./images/si-pc.png" class="si-img">
+            </td>
+            <td class="bbdd">
+                <p class="texto-celdas">Bases de Datos</p>
+                <img src="./images/bbdd-mysql.png" class="bbdd-img">
+            </td>
+            <td class="si">
+                <p class="texto-celdas">Sistemas Informáticos</p>
+                <img src="./images/si-pc.png" class="si-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="hora">12:45  13:45</td>
+            <td rowspan="2" class="lm">
+                <p class="texto-celdas">Lenguaje de Marcas</p>
+                <img src="./images/lm-html.png" class="lm-img">
+            </td>
+            <td rowspan="2" class="pr">
+                <p class="texto-celdas">Programación</p>
+                <img src="./images/java-api.png" class="pr-img">
+            </td>
+            <td class="lm">
+                <p class="texto-celdas">Lenguaje de Marcas</p>
+                <img src="./images/lm-html.png" class="lm-img">
+            </td>
+        </tr>
+        <tr>
+            <td class="hora">13:45  14:45</td>
+            <td class="lm">
+                <p class="texto-celdas">Lenguaje de Marcas</p>
+                <img src="./images/lm-html.png" class="lm-img">
+            </td>
+            <td class="pr">
+                <p class="texto-celdas">Programación</p>
+                <img src="./images/java-api.png" class="pr-img">
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>

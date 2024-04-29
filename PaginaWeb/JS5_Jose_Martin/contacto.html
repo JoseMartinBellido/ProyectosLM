@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Librería</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/contacto.css">
+</head>
+<a>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+
+    <main id="main_contacto">
+        <!-- Main: dividido en un contenedor de información de contacto (article) y un formulario básico -->
+        <h2>Contacto</h2>
+        <div id="contacto_div_contenedor"> <!-- Div que contiene todo el contacto -->
+
+            <article> <!-- article para la información de contacto -->
+
+                <div class="vias_contacto"> <!-- Vía de contacto individual-->
+                    <div class="icono_contacto"> <!-- Div para darle el fondo circular al icono-->
+                        <img src="./images/iconoEmail.svg" alt="IconoEmail">
+                    </div>
+                    <div class="descripcion_contacto">
+                        <p>contacto@laesquinadellarkin.es</p>
+                    </div>
+
+                </div>
+                <div class="vias_contacto">
+                    <div class="icono_contacto">
+                        <img src="./images/iconoMapa.svg" alt="IconoEmail">
+                    </div>
+                    <div class="descripcion_contacto">
+                        <p>Calle Madre Teresa de Calcuta nº 10, 29006, Málaga (Málaga)</p>
+                    </div>
+                </div>
+                <div class="vias_contacto">
+                    <div class="icono_contacto">
+                        <img src="./images/iconoTelefono.svg" alt="IconoEmail">
+                    </div>
+                    <div class="descripcion_contacto">
+                        <p>000 000 000</p>
+                    </div>
+                </div>
+
+                <div class="redes_sociales"> <!-- Div para las Redes Sociales -->
+                    <a href="" class="enlaces_iconos" id="enlace_rsf">
+                        <div class="contenedor_iconos">
+                            <img src="./images/iconoFacebookBlanco.svg" alt="facebookB" id="icono_facebook_b">
+                            <img src="./images/iconoFacebookNegro.svg" alt="facebookN" id="icono_facebook_n">
+                        </div>
+                    </a>
+                    <a href="" class="enlaces_iconos" id="enlace_rsi">
+                        <div class="contenedor_iconos">
+                            <img src="./images/iconoInstagramBlanco.svg" alt="instagramB" id="icono_instagram_b">
+                            <img src="./images/iconoInstagramNegro.svg" alt="instagramN" id="icono_instagram_n">
+                        </div>
+                    </a>
+                    <a href="" class="enlaces_iconos" id="enlace_rst">
+                        <div class="contenedor_iconos">
+                            <img src="./images/iconoTwitterBlanco.svg" alt="twitterB" id="icono_twitter_b">
+                            <img src="./images/iconoTwitterNegro.svg" alt="twitterN" id="icono_twitter_n">
+                        </div>
+                    </a>
+                </div>
+
+            </article>
+
+            <form action="">
+                <!-- Debería tener action="post", pero si lo hago daría error al darle al botón de enviar ya que no hay enlace real -->
+
+                <input type="text" name="nombre" placeholder="Nombre">
+
+                <input type="email" name="email" placeholder="Correo electrónico">
+
+                <input type="text" name="asunto" placeholder="Asunto">
+
+                <textarea name="mensaje" id="mensaje" cols="30" rows="6" placeholder="Mensaje"></textarea>
+
+                <input type="submit" value="Enviar" id="boton_enviar">
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="./javascript/ajax.js"></script>
+    </body>
+
+</html>

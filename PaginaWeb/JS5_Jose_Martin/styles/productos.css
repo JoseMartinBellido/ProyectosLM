@@ -1,0 +1,417 @@
+/* Variables y ajustes generales */
+:root{
+    /* Grosor 400 fuenteTitulos */
+    --fuenteTitulos: 'Merriweather', serif; 
+    /* Grosor 400 Regular e Italic*/
+    --fuenteTitulosMenores: 'Prompt', sans-serif;
+    /* Regular 400 */
+    --fuenteParrafos: 'EB Garamond', serif;
+
+    --colorPrincipal: #0092FF;
+    --colorPrincipalOscuro: #003761;
+    --colorSecundario:#FF9900;
+    --colorNegro: #000000;
+    --colorBlanco: #ffffff;
+    --colorFondo: #fbfbfb;
+
+    --cursiva: italic;
+}
+
+/* Página destinada a la creación de estilos para los productos */
+
+/*---------------------------------------- Ajustes div que ordena la Página ----------------------------------------*/
+
+.orden_productos_div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background-color: var(--colorFondo);
+    padding: 3vh 5vw 2vh 0;
+}
+
+.orden_productos_div>p{
+    font-family: var(--fuenteParrafos);
+    font-size:1.1rem;
+}
+
+.orden_productos_select{
+    border: 1px var(--colorNegro) solid;
+    border-radius: 5px;
+    padding:0.3vw;
+    margin-left: 1vw;
+}
+
+/*---------------------------------------- Ajustes main ----------------------------------------*/
+
+#main_index{
+    flex-direction: column;
+}
+
+aside{
+    width: 15vw;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:80vw;
+}
+
+/*---------------------------------------- Ajustes aside ----------------------------------------*/
+
+.aside_form>h2{
+    font-size: 1.6rem;
+    font-family: var(--fuenteTitulosMenores);
+    margin-bottom: 1vh;
+    margin-left:2vw;
+}
+
+.aside_form{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Filtrado por nombre de autor o de título */
+
+.filtro_div{
+    display:flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    padding: 0.3vw;
+}
+
+.filtro_label, .filtro_input{
+    display:block;
+}
+
+.filtro_label{
+    font-family: var(--fuenteTitulosMenores);
+    font-size: 1rem;
+    margin-top:0.6vh;
+    margin-bottom:0.5vh;
+}
+
+
+.filtro_input{
+    border: 2px var(--colorNegro) solid;
+    width: 12vw;
+    padding: 0.5vh 1vw;
+}
+@media (hover:hover){
+    .filtro_input:hover, .filtro_input:focus{
+        border:2px var(--colorPrincipal) solid;
+    }
+}
+
+/* Filtrado por características */
+
+.aside_form>h3{
+    font-family:var(--fuenteTitulosMenores);
+    margin-top:2vh;
+    font-size: 1.1rem;
+    margin-left:2vw;
+    margin-bottom:2vh;
+}
+
+
+.checkbox_div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    padding:0.3vw;
+    margin-top: 1vh;
+}
+
+.checkbox_div>input{
+    margin-right: 1vw;
+    width:1.2vw;
+    height:1.2vw;
+}
+
+.checkbox_div>label{
+    font-size:1.1rem;
+    font-family: var(--fuenteParrafos);
+    font-weight: 700;
+}
+
+/* Filtrado por precio */
+
+.filtro_div_precio{
+    margin-left: 2vw;
+}
+
+/* Ajustes de los divs para los productos y todo el contenido */
+
+#destacados, #nuevos_lanzamientos, .productos{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0.5vw;
+    border-radius:5px;
+}
+
+#destacados, #nuevos_lanzamientos{
+    background-color: var(--colorPrincipal);
+    border: 2px var(--colorNegro) solid;
+    border-radius:5px;
+}
+
+.productos{
+    background-color: rgb(230, 230, 230, 0.1);
+    border: 2px var(--colorNegro) solid;
+    border-radius:5px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#main_index>h2{
+    font-family: var(--fuenteTitulos);
+    font-size:1.6rem;
+    margin-top:3vh;
+    margin-bottom: 3vh;
+    margin-left:5vw;
+}
+
+.producto_div{
+    width:14vw;
+    text-decoration: none;
+    color: var(--colorNegro);
+    background-color: var(--colorBlanco);
+    border: 2px var(--colorNegro) solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top:2vh;
+    margin:4vh 1vw;
+    border-radius:5px;
+}
+
+@media (hover:hover){
+    .producto_div>h5:hover{
+        color:var(--colorPrincipal);
+    }
+}
+
+.imagen_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:15vw;
+    height:20vw;
+}
+
+.producto_div img{
+    width:80%;
+    height:auto;
+}
+
+.producto_div>h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--fuenteTitulosMenores);
+    font-size:1.1rem;
+    text-align: center;
+    height:6rem;
+    margin: 0 0.5vw;
+}
+
+.producto_div>h6{
+    font-family: var(--fuenteTitulosMenores);
+    font-style:var(--cursiva);
+    font-size:0.85rem;
+    text-align: center;
+}
+
+/* Div enlacesPaginas para enlazar con más páginas en la búsqueda o en las actividades*/
+
+.enlaces_paginas{
+    padding-bottom: 2vh;
+}
+
+.enlaces_paginas, .enlaces_paginas a{
+    text-decoration: none;
+    margin-left: 0.3vw;
+    color: var(--colorNegro);
+    font-family: var(--fuenteParrafos);
+    font-size:1.2rem;
+}
+
+#pagina_marcada{
+    color: var(--colorPrincipal);
+}
+
+/*---------------------------------------- Estilos para 1024px - 1240px ----------------------------------------*/
+
+@media (1024px < width <= 1240px){
+
+    .producto_div>h5{
+        height: 5rem;
+        font-size:0.9rem;
+    }
+
+    .producto_div>h6{
+        font-size:0.75rem;
+    }
+
+}
+
+/*---------------------------------------- Estilos para 768px - 1024px ----------------------------------------*/
+
+/* Este elemento sólo funciona para tablet para que sea un número par de elementos y que, al hacer el wrap el flex no queden espacios */
+.ultimo_index{
+    display:none;
+}
+
+@media (768px < width <= 1024px){
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width:100vw;
+    }
+
+    .productos{
+        margin-right:0;
+        margin-left:0;
+    }
+
+    .producto_div{
+        width:36vw;
+    }
+
+    .imagen_div{
+        width:36vw;
+        height:40vw;
+    }
+
+    .ultimo_index{
+        display:flex;
+    }
+
+    .producto_div img{
+        width:75%;
+    }
+
+    .producto_div>h5{
+        font-size:1.3rem;
+    }
+
+    .producto_div>h6{
+        font-size:1rem;
+    }
+
+}
+
+/*---------------------------------------- Estilos para 500px - 768px  ----------------------------------------*/
+
+@media (500px < width <= 768px){
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width:100vw;
+    }
+
+    .section{
+        width:98vw;
+    }
+
+    .productos{
+        margin-right:0;
+        margin-left:0;
+    }
+
+    .producto_div{
+        width:36vw;
+    }
+
+    .imagen_div{
+        width:36vw;
+        height:50vw;
+    }
+
+    .ultimo_index{
+        display:flex;
+    }
+
+    .producto_div img{
+        width:85%;
+    }
+
+    .producto_div>h5{
+        font-size: 1.1rem;
+    }
+
+    .producto_div>h6{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media (width <= 500px){
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width:100vw;
+    }
+
+    .section{
+        width:98vw;
+    }
+
+    .productos{
+        margin-right:0;
+        margin-left:0;
+    }
+
+    .producto_div{
+        width:70vw;
+    }
+
+    .imagen_div{
+        width:70vw;
+        height:90vw;
+    }
+
+    .ultimo_index{
+        display:none;
+    }
+
+    .producto_div img{
+        width:85%;
+    }
+
+    .producto_div>h5{
+        font-size: 1.2rem;
+    }
+
+    .producto_div>h6{
+        font-size: 1rem;
+    }
+
+}

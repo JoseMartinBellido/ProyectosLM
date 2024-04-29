@@ -1,0 +1,22 @@
+1. Vamos a realizar un pasafotos con imágenes en la web que realizamos en nuestra
+página web. Puede ser en alguna página ya creada o en una nueva. Para ello, hay que
+poner dos botones, uno hacia detrás y otro hacia adelante, que cuando se pulsen se
+visualizarán las fotos. Deben de salir al menos 7 fotos relacionadas.
+
+
+2. Es igual al ejercicio anterior, pero las fotos van a lanzarse solas cuando se entra en la
+imagen. Habrá un botón de avance y parada y deben de ser al menos 7 imágenes. Se
+colocará en la cabecera de una de las páginas que utilizamos en nuestra web que
+entregamos en la primera evaluación.
+
+
+-- EXPLICACIÓN: LAS FUNCIONALIDADES DE LOS DOS PASAFOTOS SE HAN IMPLEMENTADO EN UN ÚNICO EJERCICIO EN LA PÁGINA INDEX.HTML
+-- ÉSTE VA AVANZANDO AUTOMÁTICAMENTE CADA 8 SEGUNDOS, TIENE UN BOTÓN DE AVANCE Y RETROCESO DE IMAGEN, UNO DE INICIO Y OTRO DE PARADA.
+
+3. Utilización de cookies. Vamos a realizar un modo oscuro a una de las páginas que
+hayamos creado en nuestra web, para ello, tendremos que habilitar un botón que
+cambie los colores de nuestra imagen. Tendrá que tener persistencia de datos, es
+decir, cuando se cierre el navegador y se vuelva a abrir la página, recordará la elección
+que teníamos.
+
+-- LA PÁGINA INDEX.HTML IMPLEMENTA EL MODO CLARO Y EL MODO OSCURO, A LA VEZ QUE SE SE ALMACENA EN UNA COOKIE Y SE RECURRE A ELLA EN EL MOMENTO INDICADO.

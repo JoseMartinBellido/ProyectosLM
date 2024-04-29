@@ -1,0 +1,886 @@
+/* Variables y ajustes generales */
+:root {
+    /* Grosor 400 fuenteTitulos */
+    --fuenteTitulos: 'Merriweather', serif;
+    /* Grosor 400 Regular e Italic*/
+    --fuenteTitulosMenores: 'Prompt', sans-serif;
+    /* Regular 400 */
+    --fuenteParrafos: 'EB Garamond', serif;
+
+    --colorPrincipal: #0092FF;
+    --colorPrincipalOscuro: #003761;
+    --colorSecundario: #FF9900;
+    --colorNegro: #000000;
+    --colorBlanco: #ffffff;
+    --colorFondo: #fbfbfb;
+
+    --cursiva: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--colorFondo);
+}
+
+/*---------------------------------------- Ajustes Header ----------------------------------------*/
+header {
+    height: 8rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    border: 1px black solid;
+}
+
+.enlace_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--colorNegro);
+}
+
+#logo_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5vw;
+    height: auto;
+
+    margin: auto 0.2vw auto 0.5vw;
+}
+
+#logo {
+    width: 4vw;
+
+}
+
+#logo_con_borde {
+    width: 4vw;
+    display: none;
+}
+
+/* Al título de la página le damos display flex para hacerlo en 2 líneas en columna y darle distintos márgenes*/
+#titulo_pagina {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    font-family: var(--fuenteTitulos);
+    font-size: 0.9rem;
+
+    width: 25vw;
+}
+
+#final_titulo {
+    margin-left: 1.3vw;
+}
+
+/* Aquello a lo que modifica un hover en enlaceIndex*/
+
+@media (hover:hover) {
+    .enlace_index:hover #logo {
+        display: none;
+    }
+
+    .enlace_index:hover #logo_con_borde {
+        display: block;
+    }
+
+    .enlace_index:hover #titulo_pagina {
+        text-decoration: underline;
+    }
+}
+
+
+/* Buscador del comienzo de página */
+.buscador {
+    margin: auto 23vw auto 10vw;
+    width: 37vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-timing-function: ease;
+    background-color: var(--colorBlanco);
+
+    border: 2px var(--colorNegro) solid;
+    border-radius: 5px;
+}
+
+.input_buscador {
+    width: 100%;
+    padding: 1.4vh 1vw;
+
+    border: none;
+    outline: none;
+
+    font-family: var(--fuenteTitulosMenores);
+    font-size: 1rem;
+}
+
+@media (hover:hover) {
+    .buscador:hover {
+        border: 2px var(--colorPrincipal) solid;
+    }
+}
+
+
+#boton_busqueda {
+    margin-right: 0.8vw;
+    border: none;
+    background-color: var(--colorBlanco);
+
+    width: 2.5vw;
+    height: 2vw;
+}
+
+.lupa {
+    display: block;
+
+    margin: auto;
+}
+
+#lupa_busqueda_negra {
+    width: 1.5vw;
+}
+
+#lupa_busqueda_blanca {
+    width: 1.5vw;
+    display: none;
+}
+
+/* Buscador sólo para tablet y móvil */
+
+#contenedor_buscador_movil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    background-color: var(--colorFondo);
+}
+
+#buscador_movil_tablet {
+    width: 90vw;
+    display: none;
+
+    border: 2px var(--colorNegro) solid;
+    border-radius: 5px;
+    background-color: var(--colorBlanco);
+}
+
+
+
+/* Modificaciones del botón de búsqueda cuando tenemos hover */
+
+@media (hover:hover) {
+    #boton_busqueda:hover {
+        border-radius: 12px;
+        background-color: var(--colorPrincipal);
+        cursor: pointer;
+    }
+
+    #boton_busqueda:hover #lupa_busqueda_negra {
+        display: none;
+    }
+
+    #boton_busqueda:hover #lupa_busqueda_blanca {
+        display: block;
+    }
+}
+
+
+/* Enlace al inicio de sesión y al carrito de compra */
+.enlaces_iconos {
+    margin-right: 1.2vw;
+}
+
+
+/* Enlace al inicio de sesión y hover */
+#icono_inicio_sesion_b {
+    display: block;
+}
+
+#icono_inicio_sesion_n {
+    display: none;
+}
+
+@media (hover:hover) {
+
+    #enlace_is:hover #icono_inicio_sesion_b {
+        display: none;
+    }
+
+    #enlace_is:hover #icono_inicio_sesion_n {
+        display: block;
+    }
+
+}
+
+/* Enlace al carrito de la compra y hover */
+
+#icono_carrito_b {
+    display: block;
+}
+
+#icono_carrito_n {
+    display: none;
+}
+
+@media (hover:hover) {
+    #enlace_cc:hover #icono_carrito_b {
+        display: none;
+        cursor: pointer;
+    }
+
+    #enlace_cc:hover #icono_carrito_n {
+        display: block;
+        cursor: pointer;
+
+    }
+}
+
+.contenedor_iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--colorPrincipal);
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+.contenedor_iconos img {
+    width: 1.8vw;
+}
+
+#btn-modo-claro,
+#btn-modo-oscuro {
+    cursor: pointer;
+}
+
+/*---------------------------------------- Ajustes Nav ----------------------------------------*/
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: var(--colorPrincipal);
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+/* Desplegable productos y enlaces Nav*/
+
+
+nav a {
+    text-decoration: none;
+    color: var(--colorBlanco);
+    font-family: var(--fuenteTitulosMenores);
+    font-size: 1rem;
+
+    margin-top: 0.4vh;
+    margin-bottom: 0.4vh;
+
+    display: block;
+}
+
+@media (hover:hover) {
+    nav a:hover {
+        color: var(--colorNegro);
+    }
+}
+
+
+.boton_desplegable {
+    background-color: var(--colorPrincipal);
+    color: var(--colorBlanco);
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+
+.boton_desplegable img {
+    width: 0.7rem;
+    margin-left: 0.2vw;
+}
+
+#icono_desplegable_n {
+    display: none;
+}
+
+.interior_desplegable {
+    display: none;
+    position: absolute;
+    background-color: var(--colorPrincipal);
+}
+
+.interior_desplegable a {
+    color: var(--colorBlanco);
+    padding: 1vh 1vw;
+    text-decoration: none;
+    display: block;
+}
+
+@media (hover:hover) {
+    .interior_desplegable a:hover {
+        color: var(--colorNegro);
+    }
+}
+
+
+/* Aquí desplegamos el contenido de los enlaces y les cambiamos el color a la letra con el hover */
+
+.desplegable:focus-within #icono_desplegable_b {
+    display: none;
+}
+
+.desplegable:focus-within #icono_desplegable_n {
+    display: inline;
+}
+
+@media (hover:hover) {
+    .desplegable:hover #icono_desplegable_b {
+        display: none;
+    }
+
+    .desplegable:hover #icono_desplegable_n {
+        display: inline;
+    }
+}
+
+.desplegable:focus-within .interior_desplegable {
+    display: block;
+}
+
+.desplegable:focus-within .boton_desplegable {
+    color: var(--colorNegro);
+}
+
+@media (hover:hover) {
+    .desplegable:hover .interior_desplegable {
+        display: block;
+    }
+
+    .desplegable:hover .boton_desplegable {
+        color: var(--colorNegro);
+    }
+}
+
+/*---------------------------------------- Ajustes Pasafotos ----------------------------------------*/
+
+/* Pasafotos */
+
+.contenedor-pasafotos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230, 0.1);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 15px;
+
+    max-width: min(1080px, 100%);
+}
+
+.contenedor-pasafotos h2 {
+    width: 100%;
+    font-family: var(--fuenteTitulos);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.contenedor-imagenes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagen {
+    display: none;
+}
+
+.imagen-activa {
+    display: block;
+}
+
+.imagen-activa img {
+    width: 100%;
+    height: auto;
+}
+
+/* Selector de imágenes inferior */
+.selector-imagen {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.selector-imagen img {
+    width: 100%;
+}
+
+.selector-imagen a {
+    width: calc(60% / 7);
+}
+
+.selector-imagen-derecha {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    width: 26%;
+    gap: 1rem;
+}
+
+.selector-imagen-derecha a {
+    width: calc(90% / 2);
+}
+
+.selector-imagen-derecha img {
+    width: 100%;
+    height: auto;
+    border: 2px black solid;
+}
+
+/* Botones de avance, retroceso, parada y continuar */
+
+.div-botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.fondo-boton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 20%;
+    background-color: white;
+}
+
+#flecha-der,
+#flecha-izq,
+#btn-play,
+#btn-stop {
+    cursor: pointer;
+}
+
+
+/*---------------------------------------- Ajustes main ----------------------------------------*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 64vh;
+}
+
+/*---------------------------------------- Ajustes footer ----------------------------------------*/
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: var(--colorPrincipal);
+
+
+    padding: 4vh 10vw 3vh 10vw;
+}
+
+footer img {
+    width: 1vw;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+}
+
+footer p {
+    color: var(--colorBlanco);
+    font-family: var(--fuenteParrafos);
+    text-align: center;
+}
+
+/*---------------------------------------- Estilos para 768px - 1024px ----------------------------------------*/
+
+@media (768px < width <=1024px) {
+
+    /* Ajustes para el header para tablets */
+
+    header {
+        height: 6.5rem;
+    }
+
+    #logo_div {
+        width: 5rem;
+        margin: auto 2vw auto 2vw;
+    }
+
+    #logo,
+    #logo_con_borde {
+        width: 4rem;
+    }
+
+    #titulo_pagina {
+        flex-direction: row;
+        font-size: 0.8rem;
+        width: 60vw;
+        margin-left: 1vw;
+    }
+
+    #comienzo_titulo,
+    #final_titulo {
+        width: 9.4rem;
+        text-align: left;
+    }
+
+    #comienzo_titulo {
+        margin-right: 0;
+    }
+
+    #final_titulo {
+        margin-left: 0;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    .contenedor_iconos img {
+        width: 1.4rem;
+    }
+
+    #buscador_movil_tablet {
+        width: 90vw;
+        display: flex;
+    }
+
+    #buscador_movil_tablet .input_buscador {
+        width: 100%;
+        padding: 0.8vh 0.5vw;
+    }
+
+    /* Ajustes del buscador para móviles y tablets */
+
+    #buscador_movil_tablet {
+        width: 80vw;
+        display: flex;
+        margin-top: 2vw;
+    }
+
+    .input_buscador {
+        width: 100%;
+        padding: 0.8vh 0.5vw;
+    }
+
+    #boton_busqueda {
+        margin-right: 0.8vw;
+        border: none;
+        background-color: var(--colorBlanco);
+
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    #lupa_busqueda_negra,
+    #lupa_busqueda_blanca {
+        width: 1.6rem;
+    }
+
+    .selector-imagen-derecha {
+        display: none;
+    }
+    
+    .fondo-boton img{
+        width: 80%;
+    }
+}
+
+/*---------------------------------------- Estilos para 540px - 768px  ----------------------------------------*/
+
+@media (540px < width <=768px) {
+
+    /* Ajustes para el header para móviles */
+
+    header {
+        height: 6.5rem;
+    }
+
+    #logo_div {
+        width: 5rem;
+        margin: auto 2vw auto 2vw;
+    }
+
+    #logo,
+    #logo_con_borde {
+        width: 4rem;
+    }
+
+    #titulo_pagina {
+        flex-direction: row;
+        font-size: 0.8rem;
+        width: 60vw;
+        margin-left: 1vw;
+    }
+
+    #comienzo_titulo,
+    #final_titulo {
+        width: 9.4rem;
+        text-align: left;
+    }
+
+    #comienzo_titulo {
+        margin-right: 0;
+    }
+
+    #final_titulo {
+        margin-left: 0;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    .contenedor_iconos img {
+        width: 1.2rem;
+    }
+
+    /* Ajustes para el nav de móviles */
+
+    nav {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav a,
+    .boton_desplegable {
+        font-size: 1.1rem;
+
+        margin-top: 0.8vh;
+        margin-bottom: 0.8vh;
+        padding: 0.4vw;
+    }
+
+
+    .desplegable:focus-within .interior_desplegable,
+    .desplegable:hover .interior_desplegable {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .desplegable:focus-within,
+    .desplegable:hover {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .interior_desplegable a {
+        color: var(--colorNegro);
+    }
+
+    /* Ajustes para el buscador de móviles y tablets */
+
+    #buscador_movil_tablet {
+        width: 80vw;
+        display: flex;
+        margin-top: 2vw;
+    }
+
+    .input_buscador {
+        width: 100%;
+        padding: 0.8vh 0.5vw;
+    }
+
+    #boton_busqueda {
+        margin-right: 0.8vw;
+        border: none;
+        background-color: var(--colorBlanco);
+
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    #lupa_busqueda_negra,
+    #lupa_busqueda_blanca {
+        width: 1.6rem;
+    }
+
+    /* Ajustes footer */
+    footer img {
+        width: 1rem;
+        margin-left: 0.4vw;
+        margin-right: 0.4vw;
+    }
+
+    .selector-imagen-derecha {
+        display: none;
+    }
+
+    .fondo-boton img{
+        width: 80%;
+    }
+}
+
+/*---------------------------------------- Estilos tamaños menores a 540px ----------------------------------------*/
+
+@media (width <=540px) {
+
+    /* Ajustes para el header para móviles */
+
+    header {
+        height: 6.5rem;
+    }
+
+    #logo_div {
+        width: 5rem;
+        margin: auto 2vw auto 2vw;
+    }
+
+    #logo,
+    #logo_con_borde {
+        width: 4rem;
+    }
+
+    #titulo_pagina {
+        flex-direction: column;
+        width: 45vw;
+    }
+
+    #comienzo_titulo,
+    #final_titulo {
+        width: 9rem;
+        text-align: left;
+        font-size: 1.4rem;
+    }
+
+    #comienzo_titulo {
+        margin-left: 2vw;
+    }
+
+    #final_titulo {
+        margin-left: 10vw;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    .contenedor_iconos img {
+        width: 0.9rem;
+    }
+
+    /* Ajustes para el nav de móviles */
+
+    nav {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav a,
+    .boton_desplegable {
+        font-size: 1.1rem;
+
+        margin-top: 0.8vh;
+        margin-bottom: 0.8vh;
+        padding: 0.4vw;
+    }
+
+
+    .desplegable:focus-within .interior_desplegable,
+    .desplegable:hover .interior_desplegable {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .desplegable:focus-within,
+    .desplegable:hover {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .interior_desplegable a {
+        color: var(--colorNegro);
+    }
+
+    /* Ajustes para el buscador de móviles y tablets */
+
+    #buscador_movil_tablet {
+        width: 80vw;
+        display: flex;
+        margin-top: 2vw;
+    }
+
+    .input_buscador {
+        width: 100%;
+        padding: 0.8vh 0.5vw;
+    }
+
+    #boton_busqueda {
+        margin-right: 0.8vw;
+        border: none;
+        background-color: var(--colorBlanco);
+
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    #lupa_busqueda_negra,
+    #lupa_busqueda_blanca {
+        width: 1.6rem;
+    }
+
+    /* Ajustes footer */
+    footer img {
+        width: 1rem;
+        margin-left: 0.4vw;
+        margin-right: 0.4vw;
+    }
+
+    .selector-imagen-derecha {
+        display: none;
+    }
+
+    .fondo-boton img{
+        width: 60%;
+    }
+
+}

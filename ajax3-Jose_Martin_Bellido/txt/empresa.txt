@@ -1,0 +1,24 @@
+<div>
+             <p>Xotels es una empresa de gestión hotelera internacional, 
+                especializada en hoteles independientes, boutique y lifestyle. </p>
+             <p>
+                Al ofrecer un servicio de gestión de hoteles personalizado de alta
+                 calidad y aprovechar el carácter único de los hoteles independientes, 
+                 creamos experiencias únicas para los huéspedes, y esto incrementa la 
+                 satisfacción de los huéspedes y mejora la reputación online de los hoteles.
+                  Gracias a nuestras estrategias creativas y mejores prácticas cambiamos la 
+                  situación de los hoteles y los reposicionamos para que superen a la 
+                  competencia, convirtiéndolos en líderes del mercado local.
+            </p>
+            <p>
+                Nuestra empresa de gestión hotelera y turística fue fundada en 2006 y 
+                estamos presentes en 13 países y 4 continentes, ofreciendo a los 
+                propietarios de hoteles independientes, inversores, promotoras y 
+                operadores una solución eficaz para incrementar los resultados y el 
+                valor de su activo hotelero.
+            </p>
+            <p> 
+                Xotels es una nueva generación de hoteleros, que crea hoteles de alto 
+                rendimiento. ¿Busca mejores resultados? ¡Trae a los expertos!
+            </p>
+</div>

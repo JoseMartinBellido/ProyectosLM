@@ -1,0 +1,121 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* Modo oscuro y modo claro */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2rem;
+    padding: 0.2rem;
+    gap: 1rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+
+
+
+/* Primer pasafotos */
+.contenedor-pasafotos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(230,230,230,0.1);
+    padding: 1rem;
+}
+
+.contenedor-imagenes1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    max-width: min(1080px, 100%);
+}
+
+.contenedor-imagenes2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    max-width: min(768px, 100%);
+}
+
+.imagen{
+    display: none;
+}
+
+.imagen-activa {
+    display: block;
+}
+
+.imagen-activa img{
+    width: 100%;
+    height: auto;
+}
+
+/* Selector de imágenes inferior */
+.selector-imagen{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.selector-imagen img{
+    width: 100%;
+}
+
+.selector-imagen a{
+    width: calc(60% / 7);
+}
+
+.selector-imagen-derecha{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    width: 26%;
+    gap: 1rem;
+}
+
+.selector-imagen-derecha a{
+    width: calc(90% / 2);
+}
+
+.selector-imagen-derecha img{
+    width: 100%;
+    height:auto;
+    border: 2px black solid;
+}
+
+/* Botones de avance, retroceso, parada y continuar */
+
+.div-botones{
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    padding: 1rem;
+    gap: 1.5rem;
+
+}
+
+.fondo-boton{
+    border: 2px black solid;
+    border-radius: 20%;
+    background-color: white;
+}
+
+#flecha-der, #flecha-izq, #btn-play, #btn-stop{
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 8rem;
+    border: 1px black solid;
+}
+
+header h1{
+    display: inline;
+    font-size: 1.4rem;
+}
+
+header img{
+    height: 4rem;
+    width: 4rem;
+}
+
+button{
+    background-color: white;
+}

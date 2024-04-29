@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Librería</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/iniciosesion.css">
+</head>
+<body>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+
+
+    <main id="main_inicio_sesion"> <!-- Main: dividido en inicio de sesión y formulario de registro -->
+
+        <form action="" id="formulario_inicio"> <!-- Formulario de Inicio de sesión -->
+            <h2 id="titulo_inicio">Inicio de sesión</h2>
+            <div class="input_texto_div">
+                <label for="email_inicio">Correo electrónico: </label>
+                <input type="email" name="email_inicio" id="email_inicio"
+                    pattern="[a-z]+@[outlook|hotmail|gmail|yahoo]\.[a-z]{1,3}">
+            </div>
+            <div class="input_texto_div">
+                <label for="pass_inicio">Contraseña: </label>
+                <input type="password" name="pass_inicio" id="pass_inicio"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}">
+            </div>
+            <input type="submit" value="Inicio" id="boton_inicio">
+            <a href="#formularioRegistro">¿No tienes cuenta?</a>
+        </form>
+
+
+        <form action="" id="formulario_registro"> <!-- Formulario de Registro -->
+            <h2 id="titulo_registro">Registro de usuario</h2>
+            <div class="input_texto_div">
+                <label for="usuario">Usuario: </label>
+                <input type="text" name="usuario" id="usuario" pattern="[A-Za-z0-9]+" maxlength="20">
+            </div>
+            <div class="input_texto_div">
+                <label for="pass_registro">Contraseña: </label>
+                <input type="password" name="pass_registro" id="pass_registro"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}">
+            </div>
+            <div class="input_texto_div">
+                <label for="email_registro">Correo electrónico: </label>
+                <input type="email" name="email_registro" id="email_registro"
+                    pattern="[a-z]+@[outlook|hotmail|gmail|yahoo]\.[a-z]{1,3}" maxlength='16' minlength='8'>
+            </div>
+            <div class="input_texto_div">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" pattern="[A-ZÁÉÍÓÚa-záéíóú\s]+" maxlength='20'>
+            </div>
+            <div class="input_texto_div">
+                <label for="apellido1">Primer Apellido: </label>
+                <input type="text" name="apellido1" id="apellido1" pattern="[A-ZÁÉÍÓÚa-záéíóú\s]+" maxlength='20'>
+            </div>
+            <div class="input_texto_div">
+                <label for="apellido2">Segundo Apellido: </label>
+                <input type="text" name="apellido2" id="apellido2" pattern="[A-ZÁÉÍÓÚa-záéíóú\s]+" maxlength='20'>
+            </div>
+            <div class="input_texto_div">
+                <label for="direccion">Dirección: </label>
+                <input type="text" name="direccion" id="direccion" pattern="[A-ZÁÉÍÓÚa-záéíóú\s]+" maxlength='50'>
+            </div>
+            <div class="input_texto_div">
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" name="telefono" id="telefono" pattern="[6-9][0-9]{8}">
+            </div>
+            <div class="input_radio_div">
+                <label id="titulo_genero">Género: </label>
+                <div id="opciones_genero">
+                    <input type="radio" value="masculino" id="masculino" name="genero">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" value="femenino" id="femenino" name="genero">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" value="no_definido" id="no_definido" name="genero">
+                    <label for="no_definido">No definido</label>
+                </div>
+            </div>
+
+            <div class="input_fecha_div">
+                <label for="fecha_nac">Fecha de Nacimiento: </label>
+                <input type="date" id="fecha_nac">
+            </div>
+
+            <div class="input_condiciones_div">
+                <input type="checkbox" value="condiciones" id="condiciones" name="condiciones" required>
+                <label for="condiciones">Consiento el tratamiento de mis datos personales con el fin exclusivo al que va
+                    destinado este formulario.</label>
+            </div>
+            <input type="submit" value="Registro" id="boton_registro">
+        </form>
+
+    </main>
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="./javascript/ajax.js"></script>
+</body>
+
+</html>

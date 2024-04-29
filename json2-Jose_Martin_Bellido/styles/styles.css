@@ -1,0 +1,23 @@
+:root{
+    --fuente-texto: "Open Sans", sans-serif;
+    --colorPrincipal: #2821DE;
+    --colorPrincipalClaro: #21CEDE;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../images/background.png);
+    background-size: contain;
+}
+
+main{
+    margin: 5vh 10vw;
+    background-color: white;
+
+    border: 3px black solid;
+    border-radius: 5px;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>La esquirla del larkin</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/actividades.css">
+</head>
+
+<body>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+    <main id="main_actividades">
+        <h2>Actividades</h2>
+        <div id="contenedor_actividades">
+            <div class="actividad_div">
+                <div class="actividad_imagen_div"> <!-- Firma de libros - Joe Abercrombie -->
+                    <img src="./images/actividades__firma-libros.abercrombie.jpg" alt="FirmaAbercrombie">
+                </div>
+                <h3>Firma de libros - Joe Abercrombie</h3>
+                <h4>05/12/2023</h4>
+                <p>El martes 05 de Diciembre viene a visitarnos Joe Abercrombie para una firma de libros con el motivo
+                    de la salida de su último libro de la trilogía La Primera Ley en edición ilustrada.
+                    Desde La Esquirla del Larkin esperamos que podáis acudir con vuestras ediciones más queridas para
+                    que
+                    el autor en persona os lo pueda firmar y dedicar. Tendremos ejemplares preparados en nuestro local
+                    en caso de que queráis comprarlo aquí mismo y llevároslo firmado. ¡Esperamos con impaciencia la
+                    fecha!
+                </p>
+
+            </div>
+            <div class="actividad_div">
+                <div class="actividad_imagen_div"> <!-- Club de lectura: El Nombre del Viento -->
+                    <img src="./images/actividades__club-de-lectura-ruiz-zafon.jpg" alt="FirmaAbercrombie">
+                </div>
+                <h3>Club de Lectura - La Sombra del Viento</h3>
+                <h4>29/11/2023</h4>
+                <p>El miércoles 29 de Noviembre de 17:00h a 19:00h recordamos a Carlos Ruíz Zafón con un club de lectura
+                    del primer libro
+                    de su tetralogía más famosa, La Sombra del Viento. Un libro de ficción histórica ambientada en
+                    Barcelona
+                    durante los años de la guerra civil española. La tetralogía que ha dado la vuelta al mundo de un
+                    español
+                    más que conocido. Esperamos que lo disfruteis y comentéis vuestras impresiones el próximo 29 de
+                    Diciembre.
+                    ¡Ánimo con la lectura!
+                </p>
+
+            </div>
+            <div class="actividad_div">
+                <div class="actividad_imagen_div"> <!-- Presentación Growing Season -->
+                    <img src="./images/actividades__eric-rodriguez-growing-season.jpg" alt="FirmaAbercrombie">
+                </div>
+                <h3>Presentación de Growing Season - Eric Rodriguez</h3>
+                <h4>09/11/2023</h4>
+                <p>El jueves 09 de Noviembre viene a nuestra librería ni más ni menos que Eric Rodriguez, youtuber
+                    y streamer del canal Leyendas y Videojuegos, a presentarnos su nuevo juego de mesa Growing Season.
+                    Si os gustan los juegos de mesa y de cartas, pasaos por nuestra librería a las 18:00h y veremos de
+                    qué trata ésta novedad, que traeremos muy pronto a nuestra tienda, y quién sabe, ¡quizás nos deje
+                    jugar
+                    una partida!
+                </p>
+            </div>
+            <div class="actividad_div">
+                <div class="actividad_imagen_div"> <!-- Lectura infantil - Alcatraz -->
+                    <img src="./images/actividades__lectura-infantil-alcatraz.jpg" alt="FirmaAbercrombie">
+                </div>
+                <h3>Lectura infantil - Alcatraz contra los Bibliotecarios Malvados</h3>
+                <h4>26/10/2023</h4>
+                <p>El jueves 26 de Octubre realizamos una lectura juvenil para los más peques del libro Alcatraz contra
+                    los
+                    Bibliotecarios Malvados, escrito por Brandon Sanderson. Desde las 11:00h hasta las 12:30h, leeremos
+                    los
+                    primeros capítulos de un libro donde un grupo de chicos inusuales se convertirán en los encargados
+                    de luchar
+                    contra unos bibliotecarios que controlan en secreto algunos de los países más poderosos del mundo.
+                    ¡Esperamos
+                    que lo disfruteis!
+                </p>
+            </div>
+        </div>
+        <div class="enlaces_paginas">
+            Página: <a href="#" id="pagina_marcada">1</a><a href="#">2</a><a href="#">...</a><a href="#">30</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="./javascript/ajax.js"></script>
+</body>
+
+</html>

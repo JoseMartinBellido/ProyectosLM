@@ -1,0 +1,113 @@
+:root {
+    --fuente-principal: 'Roboto Condensed', sans-serif;
+    --color-principal: #59BFEB;
+    --color-secundario: #434D52;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el nav y header copiados del Menú Hamburguesa */
+
+body{
+    height: 100vh;
+}
+
+/* Ajustes de nav y header */
+
+header{
+    text-align: center;
+    padding: 1rem;
+    height: 12vh;
+
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+nav img{
+    margin-bottom: 0.4rem;
+}
+
+nav {
+    height: 6vh;
+    background-color: var(--color-secundario);
+    padding: 0.5rem;
+    cursor: pointer;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Mientras no se clicke en el menú hamburguesa, seguirá sin estar desplegado con un display: none*/
+#contenedor-enlaces{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+@media (min-width: 768px){
+    #icono-menu-hamburguesa{
+        display: none;
+    }
+
+    #contenedor-enlaces{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    
+        width: 100%;
+    }
+}
+
+nav a{
+    text-decoration: none;
+    color:var(--color-principal);
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Estilos del ejercicio 3 y 4 propios */
+
+main{
+    position: relative;
+    height: calc(100vh - 12vh - 6vh - 3rem);
+    background-color: rgb(220, 218, 218);
+}
+
+#coche{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+}
+
+#muro {
+    position: absolute;
+
+    left: 400px;
+    top: 150px;
+}
+
+#reset{
+    height: 3rem;
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: var(--color-secundario);
+    color:var(--color-principal)
+}
+
+#reset:hover {
+    cursor: pointer;
+    color:black;
+    background-color: var(--color-principal);
+}

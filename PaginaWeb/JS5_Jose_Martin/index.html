@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>La esquirla del larkin</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/productos.css">
+</head>
+
+<body>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+        <!-- Modo claro y oscuro -->
+        <div class="enlaces_iconos contenedor_iconos">
+            <img src="./images/modo-light.svg" alt="sol" id="btn-modo-claro">
+        </div>
+        <div class="enlaces_iconos contenedor_iconos">
+            <img src="./images/modo-dark.svg" alt="luna" id="btn-modo-oscuro">
+        </div>
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+    <div id="contenedor_buscador_movil">
+        <div id="buscador_movil_tablet">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+    </div>
+    
+    <!-- Pasafotos. Ejercicios 1 y 2 - Relación 5 de JS -->
+    <section class="contenedor-pasafotos">
+        <h2>¡Libros, cómics, manga, juegos de mesa y mucho más!</h2>
+        <!-- Contenedor de imágenes del pasafotos -->
+        <div class="contenedor-imagenes">
+
+            <div class="imagen-activa" id="imagen1">
+                <img src="./images/pasafotos1-cosmere.jpg" alt="imagen1">
+            </div>
+            <div class="imagen" id="imagen2">
+                <img src="./images/pasafotos2-the_first_law.jpg" alt="imagen2">
+            </div>
+            <div class="imagen" id="imagen3">
+                <img src="./images/pasafotos3-the_name_of_the_wind.jpg" alt="imagen3">
+            </div>
+            <div class="imagen" id="imagen4">
+                <img src="./images/pasafotos4-bone.jpg" alt="imagen4">
+            </div>
+            <div class="imagen" id="imagen5">
+                <img src="./images/pasafotos5-wheel_of_time.jpg" alt="imagen5">
+            </div>
+            <div class="imagen" id="imagen6">
+                <img src="./images/pasafotos6-juegos_de_mesa.jpg" alt="imagen6">
+            </div>
+            <div class="imagen" id="imagen7">
+                <img src="./images/pasafotos7-magic_the_gathering.jpg" alt="imagen7">
+            </div>
+
+            <div class="selector-imagen-derecha"> <!-- Selector de imágenes derecha -->
+                <a href="#" id="imagen1-selector"><img src="./images/pasafotos1-cosmere.jpg" alt="imagen1"></a>
+                <a href="#" id="imagen2-selector"><img src="./images/pasafotos2-the_first_law.jpg" alt="imagen2"></a>
+                <a href="#" id="imagen3-selector"><img src="./images/pasafotos3-the_name_of_the_wind.jpg" alt="imagen3"></a>
+                <a href="#" id="imagen4-selector"><img src="./images/pasafotos4-bone.jpg" alt="imagen4"></a>
+                <a href="#" id="imagen5-selector"><img src="./images/pasafotos5-wheel_of_time.jpg" alt="imagen5"></a>
+                <a href="#" id="imagen6-selector"><img src="./images/pasafotos6-juegos_de_mesa.jpg" alt="imagen6"></a>
+                <a href="#" id="imagen7-selector"><img src="./images/pasafotos7-magic_the_gathering.jpg" alt="imagen7"></a>
+            </div>
+        </div> <!-- Fin del contenedor de imágenes -->        
+
+        <!-- Botones de play y stop -->
+        <div class="div-botones">
+            <div class="fondo-boton">
+                <img src="./images/flecha-izq.svg" id="flecha-izq">
+            </div>
+            <div class="fondo-boton">
+                <img src="./images/stop.svg" alt="stop" id="btn-stop">
+            </div>
+            <div class="fondo-boton">
+                <img src="./images/play.svg" alt="play" id="btn-play">
+            </div>
+            <div class="fondo-boton">
+                <img src="./images/flecha-der.svg" id="flecha-der">
+            </div>
+
+        </div>
+
+    </section> <!-- Fin del pasafotos -->
+
+    <main id="main_index">
+        <!-- La página principal no dispone de filtrado, pero sí de secciones de destacados o últimos lanzamientos/novedades-->
+
+        <h2 id="titulo_destacados">Productos destacados</h2>
+        <div id="destacados">
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <!-- El texto alt va a ser "l" si es libro, "c" si es cómic o "j" si es juego + el acrónimo del título/juego +"-" + acrónimo del autor/empresa -->
+                    <img src="./images/libro__el-ultimo-argumento-de-los-reyes-ilustrado_Joe-Abercrombie.jpg"
+                        alt="leuadlri-ja">
+                </div>
+                <h5>El Último Argumento de los Reyes</h5>
+                <h6>Joe Abercrombie</h6>
+                <h6>PREVENTA - 34,95€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__harry-potter-y-el-prisionero-de-azkaban_J-K-Rowling.jpg"
+                        alt="lhpyepda-jkr">
+                </div>
+                <h5>Harry Potter y el Prisionero de Azkaban</h5>
+                <h6>J. K. Rowling</h6>
+                <h6>PREVENTA - 37,95€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__exploding-kittens-2-players.jpg" alt="jek2p-ekinc">
+                </div>
+                <h5>Exploding Kittens 2 Jugadores</h5>
+                <h6>Exploding kittens Inc</h6>
+                <h6>10,50€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__guardias-guardias_Terry-Pratchett.jpg" alt="lgg-tp">
+                </div>
+                <h5>¡Guardias! ¡Guardias!</h5>
+                <h6>Terry Pratchett</h6>
+                <h6>10,40€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>CÓMIC/MANGA</h6>
+                <div class="imagen_div">
+                    <img src="./images/comic__hel'blar_Alex-Sierra_Sergio-Sierra.jpg" alt="chb-asss">
+                </div>
+                <h5>Hel'Blar - Los Cazadores de Draugar</h5>
+                <h6>Alex y Sergio A. Sierra</h6>
+                <h6>16,00€</h6>
+            </a>
+            <a href="#" class="producto_div ultimo_index">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__blitz_Devir.jpg" alt="jb-d">
+                </div>
+                <h5>Blitz</h5>
+                <h6>Devir</h6>
+                <h6>15,85€</h6>
+            </a>
+        </div>
+
+        <div class="productos"> <!-- Comienzo del primer div productos-->
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__jungle-speed_Tom-and-Yako.jpg" alt="jjs-tay">
+                </div>
+                <h5>Jungle Speed</h5>
+                <h6>Tom&Yako</h6>
+                <h6>21,99€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>CÓMIC/MANGA</h6>
+                <div class="imagen_div">
+                    <img src="./images/comic__bone-integral_Jeff-Smith.jpg" alt="cbi-js">
+                </div>
+                <h5>Bone - Integral</h5>
+                <h6>Jeff Smith</h6>
+                <h6>45,00€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__el-camino-de-los-reyes_brandon-sanderson.jpg" alt="lecdlr-bs">
+                </div>
+                <h5>El Camino de los Reyes</h5>
+                <h6>Brandon Sanderson</h6>
+                <h6>33,15€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__aprendiz-de-asesino_Robin-Hobb.jpg" alt="lada-rh">
+                </div>
+                <h5>Aprendiz de Asesino</h5>
+                <h6>Robin Hobb</h6>
+                <h6>10,99€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__taco-gato-cabra-queso-pizza_lúdilo.jpg" alt="jtgcqp-l">
+                </div>
+                <h5>Taco Gato Cabra Queso Pizza</h5>
+                <h6>Lúdilo</h6>
+                <h6>16,20€</h6>
+            </a>
+            <a href="#" class="producto_div  ultimo_index">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__qwirkle_lúdilo.jpg" alt="jq-l">
+                </div>
+                <h5>Qwirkle</h5>
+                <h6>Lúdilo</h6>
+                <h6>15,55€</h6>
+            </a>
+        </div>
+
+        <h2 id="titulo_nuevos_lanzamientos">Lanzamientos recientes</h2>
+        <div id="nuevos_lanzamientos"> <!-- Comienzo de los lanzamientos recientes -->
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__hermana-roja_Mark-Lawrence.jpg" alt="lhr-ml">
+                </div>
+                <h5>Hermana Roja</h5>
+                <h6>Mark Lawrence</h6>
+                <h6>23,70€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__magic-el-señor-de-los-anillos-starter_magic-the-gathering.jpg"
+                        alt="jmesdlas-mtg">
+                </div>
+                <h5>Magic El Señor de los Anillos - Starter Pack</h5>
+                <h6>Magic the Gathering</h6>
+                <h6>23,28€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__skyjo_lúdilo.jpg" alt="js-l">
+                </div>
+                <h5>Skyjo</h5>
+                <h6>Lúdilo</h6>
+                <h6>15,98€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__el-hombre-iluminado_Brandon-Sanderson.jpg" alt="lehi-bs">
+                </div>
+                <h5>El Hombre Iluminado</h5>
+                <h6>Brandon Sanderson</h6>
+                <h6>10,99€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>CÓMIC/MANGA</h6>
+                <div class="imagen_div">
+                    <img src="./images/comic__berserk-41_Kentaro-Miura.jpg" alt="cb41-km">
+                </div>
+                <h5>Berserk - 41</h5>
+                <h6>Kentaro Miura</h6>
+                <h6>9,50€</h6>
+            </a>
+            <a href="#" class="producto_div ultimo_index">
+                <h6>CÓMIC/MANGA</h6>
+                <div class="imagen_div">
+                    <img src="./images/comic__fabulas-1_Bill-Willingham.jpg" alt="cf1-bw">
+                </div>
+                <h5>Edición de Lujo - Fábulas uno</h5>
+                <h6>Bill Willingham</h6>
+                <h6>24,95€</h6>
+            </a>
+        </div>
+
+        <div class="productos"> <!-- Comienzo del segundo div productos-->
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__proyecto-hail-mary_Andy-Weir.jpg" alt="lphm-aw">
+                </div>
+                <h5>Proyecto Hail Mary</h5>
+                <h6>Andy Weir</h6>
+                <h6>28,75€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>JUEGO/CARTAS</h6>
+                <div class="imagen_div">
+                    <img src="./images/juego__capitan-bacon_tranjis-games.jpg" alt="jcp-tg">
+                </div>
+                <h5>Capitán Bacon</h5>
+                <h6>Tranjis Games</h6>
+                <h6>15,95€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>CÓMIC/MANGA</h6>
+                <div class="imagen_div">
+                    <img src="./images/comic__oz-integral_L-Frank-Baum.jpg" alt="coi-lfb">
+                </div>
+                <h5>OZ - Integral</h5>
+                <h6>L. Frank Baum</h6>
+                <h6>33,25€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__pack-nacidos-de-la-bruma_Brandon-Sanderson.jpg" alt="lndlbp-bs">
+                </div>
+                <h5>Trilogía Nacidos de la Bruma</h5>
+                <h6>Brandon Sanderson</h6>
+                <h6>59,60€</h6>
+            </a>
+            <a href="#" class="producto_div">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__el-ascenso-de-la-sombra_Robert-Jordan.jpg" alt="leadls-rj">
+                </div>
+                <h5>El Ascenso de la Sombra</h5>
+                <h6>Robert Jordan</h6>
+                <h6>18,95€</h6>
+            </a>
+            <a href="#" class="producto_div  ultimo_index">
+                <h6>LIBRO</h6>
+                <div class="imagen_div">
+                    <img src="./images/libro__vencer-al-dragon_Barbara-Hambly.jpg" alt="lvad-bh">
+                </div>
+                <h5>Vencer al Dragón</h5>
+                <h6>Barbara Hambly</h6>
+                <h6>12,30€</h6>
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script src="./javascript/js.js"></script>
+    <script src="./javascript/ajax.js"></script>
+</body>
+
+</html>

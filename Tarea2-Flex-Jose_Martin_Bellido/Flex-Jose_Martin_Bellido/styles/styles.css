@@ -1,0 +1,175 @@
+/* ------------- Ajustes generales ------------- */
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Vollkorn', serif;
+}
+
+body{
+    background-image: linear-gradient(to bottom right,#EBA846, #704300);
+}
+
+/* Aplicamos display flex a todos los divs */
+
+header, nav, section, article, aside, footer, #central-sup-izq, #central-sup-der, #central-sup-med , #central-inf, .derecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:auto;
+}
+
+
+nav,section, article, aside, #central-sup-izq, #central-sup-der, #central-sup-med , #central-inf, .derecha{
+    border-radius: 1.5%;
+}
+
+
+/* ------------- Ajustes de divs externos (header,section y footer) e internos (nav, article, aside)------------- */
+
+/*
+Asignación a cada div y clase de su color de fondo, tipo y color de letra y dimensiones. Explicado en imágenes fuera de la carpeta proyecto.
+Gradientes realizados con la paleta de colores establecida.
+ */
+
+header,footer{
+    font-family: 'Libre Baskerville', serif;
+    height: 12vh;
+    font-size: 1.1vw;
+
+    background-image:linear-gradient(to right,#77BBEB,#708899) ;
+    color:#704300;
+}
+
+header>h1{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+section{
+    height:76vh;
+}
+
+nav, article, aside{
+    height:70vh;
+    border: 6.5px #704300 solid;
+    font-size:2vw;
+}
+
+nav{
+    width:14vw;
+
+    background-image:linear-gradient(to bottom,#704300,#EBA846,#704300);
+    
+    flex-direction: column;
+}
+
+nav>h1{
+    font-family: 'Marcellus', serif;
+    font-size:2vw;
+}
+
+nav>img{
+    width:4vw;
+    margin-top:1vh;
+}
+
+article{
+    width: 58vw;
+
+    flex-wrap:wrap;
+}
+
+aside{
+    width: 20vw;
+    font-family: 'Marcellus', serif;
+
+    flex-direction: column;
+}
+
+/* ------------- Ajustes de divs internos centrales (internos al article) ------------- */
+
+#central-sup-izq, #central-sup-der, #central-sup-med{
+    height:25vh;
+    width:17vw;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px #704300 solid;
+}
+
+#central-sup-izq, #central-sup-der, #central-sup-med{
+    background-image:linear-gradient(to right bottom,#704300,#704300,#A89577);
+    color:#708899;
+}
+
+#central-sup-izq{
+    font-family: 'Libre Baskerville', serif;
+}
+
+#central-sup-der{
+    font-family: 'Vollkorn', serif;
+}
+
+#central-sup-med{
+    font-family: 'Marcellus', serif;
+}
+
+#central-inf{
+    height: 32vh;
+    width:45vw;
+    
+    background-image:linear-gradient(to right bottom,#A89577,#A89577,#704300);
+    color:#704300;
+    border: 3px #704300 solid;
+}
+
+.fontjoy{
+    width:2vw;
+    margin:1vw;
+}
+
+/* ------------- Ajuste de divs derechos (internos al aside) ------------- */
+
+.derecha{
+    height:11.2vh;
+    width:18vw;
+
+    background-image:linear-gradient(to right,#704300,#EBA846);
+    border: 3px #704300 solid;
+
+}
+
+#color1, #color2, #color3, #color4, #color5{
+    height: 1.6vw;
+    width: 1.6vw;
+
+    border: 2px black solid;
+    margin-right: 0.6vw;
+}
+
+#color1{
+    background-color:#77BBEB ;
+}
+
+#color2{
+    background-color:#A89577 ;
+}
+
+#color3{
+    background-color:#EBA846 ;
+}
+
+#color4{
+    background-color:#708899 ;
+}
+
+#color5{
+    background-color:#704300 ;
+}
+
+footer>img{
+    width: 5vw;
+    margin-left:1vw;
+}

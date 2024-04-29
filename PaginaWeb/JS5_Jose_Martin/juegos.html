@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Juegos de mesa y Cartas</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/productos.css">
+</head>
+
+<body>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+    <div id="contenedor_buscador_movil">
+        <div id="buscador_movil_tablet">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+    </div>
+    <div class="orden_productos_div">
+        <p>Ordenar por: </p>
+        <select name="ordenProductosSelect" class="orden_productos_select">
+            <option value="nuevos">Fecha de lanzamiento</option>
+            <option value="alfabeticoAsc">Título A-Z</option>
+            <option value="alfabeticoDesc">Título Z-A</option>
+            <option value="precioAsc">Precio ascendente</option>
+            <option value="precioDesc">Precio descendente</option>
+        </select>
+
+    </div>
+    <main>
+
+        <!-- aside dedicado al filtrado de libros por diversas opciones -->
+        <aside>
+            <form action="" class="aside_form">
+                <h2>Libros</h2>
+                <div class="filtro_div">
+                    <label for="filtro_autor" class="filtro_label">Autor: </label>
+                    <input type="text" name="filtro_autor" id="filtro_autor" pattern="^[0-9]"
+                        class="input_buscador filtro_input">
+                </div>
+                <div class="filtro_div">
+                    <label for="filtro_titulo" class="filtro_label">Título: </label>
+                    <input type="text" name="filtro_titulo" id="filtro_titulo" class="input_buscador filtro_input">
+                </div>
+
+                <h3>Características</h3>
+
+                <div class="filtro_div">
+                    <div class="checkbox_div">
+                        <input type="checkbox" name="preventa" id="preventa" class="checkbox_input_filtro">
+                        <label for="preventa">Preventa</label>
+                    </div>
+                    <div class="checkbox_div">
+                        <input type="checkbox" name="nuevo" id="nuevo" class="checkbox_input_filtro">
+                        <label for="nuevo">Nuevos lanzamientos</label>
+                    </div>
+                    <div class="checkbox_div">
+                        <input type="checkbox" name="segunda_mano" id="segunda_mano" class="checkbox_input_filtro">
+                        <label for="segunda_mano">2ª Mano</label>
+                    </div>
+                </div>
+
+                <h3>Precio</h3>
+
+                <div class="filtro_div_precio">
+                    <label for="filtro_precio_min" class="filtro_label">Precio mínimo: </label>
+                    <input type="text" name="filtro_precio_min" id="filtro_precio_min" pattern="[0-9]*[,.\']?[0-9]?[0-9]?"
+                        class="input_buscador filtro_input">
+                </div>
+                <div class="filtro_div_precio">
+                    <label for="filtro_precio_max" class="filtro_label">Precio máximo: </label>
+                    <input type="text" name="filtro_precio_max" id="filtro_precio_max" pattern="[0-9]*[,.\']?[0-9]?[0-9]?"
+                        class="input_buscador filtro_input">
+                </div>
+
+            </form>
+
+        </aside>
+        <section>
+            <div class="productos">
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__exploding-kittens-2-players.jpg" alt="jek2p-ekinc">
+                    </div>
+                    <h5>Exploding Kittens 2 Jugadores</h5>
+                    <h6>Exploding kittens Inc</h6>
+                    <h6>10,50€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__taco-gato-cabra-queso-pizza_lúdilo.jpg" alt="jtgcqp-l">
+                    </div>
+                    <h5>Taco Gato Cabra Queso Pizza</h5>
+                    <h6>Lúdilo</h6>
+                    <h6>16,20€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__magic-el-señor-de-los-anillos-starter_magic-the-gathering.jpg"
+                            alt="jmesdlas-mtg">
+                    </div>
+                    <h5>Magic El Señor de los Anillos - Starter Pack</h5>
+                    <h6>Magic the Gathering</h6>
+                    <h6>23,28€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__skyjo_lúdilo.jpg" alt="js-l">
+                    </div>
+                    <h5>Skyjo</h5>
+                    <h6>Lúdilo</h6>
+                    <h6>15,98€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__capitan-bacon_tranjis-games.jpg" alt="jcp-tg">
+                    </div>
+                    <h5>Capitán Bacon</h5>
+                    <h6>Tranjis Games</h6>
+                    <h6>15,95€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__blitz_Devir.jpg" alt="jb-d">
+                    </div>
+                    <h5>Blitz</h5>
+                    <h6>Devir</h6>
+                    <h6>15,85€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__carcassonne_devir.jpg" alt="jc-d">
+                    </div>
+                    <h5>Carcassonne</h5>
+                    <h6>Devir</h6>
+                    <h6>28,50€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__chef-umami_magicbox.jpg" alt="jcu-m">
+                    </div>
+                    <h5>Chef Umami</h5>
+                    <h6>Magicbox</h6>
+                    <h6>16,45€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__qwirkle_lúdilo.jpg" alt="jq-l">
+                    </div>
+                    <h5>Qwirkle</h5>
+                    <h6>Lúdilo</h6>
+                    <h6>15,55€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__sushi-go_devir.jpg" alt="jsg-d">
+                    </div>
+                    <h5>Sushi Go</h5>
+                    <h6>Devir</h6>
+                    <h6>9,99€</h6>
+                </a>
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__tabu-hasbro.jpg" alt="jt-h">
+                    </div>
+                    <h5>Tabú</h5>
+                    <h6>Hashbro</h6>
+                    <h6>25,29€</h6>
+                </a>
+
+                <a href="#" class="producto_div">
+                    <h6>JUEGO/CARTAS</h6>
+                    <div class="imagen_div">
+                        <img src="./images/juego__jungle-speed_Tom-and-Yako.jpg" alt="jjs-tay">
+                    </div>
+                    <h5>Jungle Speed</h5>
+                    <h6>Tom&Yako</h6>
+                    <h6>21,99€</h6>
+                </a>
+            </div>
+            <div class="enlaces_paginas">
+                Página: <a href="#" id="pagina_marcada">1</a><a href="#">2</a><a href="#">...</a><a href="#">30</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="./javascript/ajax.js"></script>
+</body>
+
+</html>

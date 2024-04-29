@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Librería</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Martín Bellido">
+    <meta name="copyright" content="José Martín Bellido">
+    <meta http-equiv="refresh" content="600">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Prompt:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/libreria.css">
+</head>
+<body>
+
+    <header> <!-- Header / Cabecera -->
+        <a href="./index.html" class="enlace_index">
+            <div id="logo_div">
+                <img src="./images/Logo.png" alt="Logotipo" id="logo">
+                <img src="./images/LogoConBorde.png" alt="Logotipo" id="logo_con_borde">
+
+            </div>
+            <div id="titulo_pagina">
+                <h1 id="comienzo_titulo">La Esquirla</h1>
+                <h1 id="final_titulo">del Larkin</h1>
+            </div>
+        </a>
+
+        <div class="buscador">
+            <input type="text" name="buscador" class="input_buscador" pattern="[A-ZÑÁÉÍÓÚa-zñáéíóú]+" maxlength="50"
+                placeholder="Estoy buscando...">
+            <button id="boton_busqueda">
+                <img src="./images/lupaNegra.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_negra">
+                <img src="./images/lupaBlanca.svg" alt="Búsqueda" class="lupa" id="lupa_busqueda_blanca">
+            </button>
+            </input>
+        </div>
+
+        <a href="./iniciosesion.html" class="enlaces_iconos" id="enlace_is">
+            <div class="contenedor_iconos">
+                <img src="./images/inicioSesion.svg" alt="InicioSesion" id="icono_inicio_sesion_b">
+                <img src="./images/inicioSesionNegro.svg" alt="InicioSesionNegro" id="icono_inicio_sesion_n">
+            </div>
+        </a>
+        <a class="enlaces_iconos" id="enlace_cc">
+            <div class="contenedor_iconos">
+                <img src="./images/carritoCompra.svg" alt="CarritoCompra" id="icono_carrito_b">
+                <img src="./images/carritoCompraNegro.svg" alt="CarritoCompra" id="icono_carrito_n">
+            </div>
+        </a>
+
+    </header>
+    <nav> <!-- Nav / Barra de navegación -->
+        <!-- Cinco apartados -> Inicio | Productos | Actividades | Librería | Contacto -->
+
+        <a href="./index.html">INICIO</a>
+        <div class="desplegable">
+            <button class="boton_desplegable">
+                PRODUCTOS
+                <img src="./images/iconoTrianguloDesplegableNegro.svg" alt="iconoDesplegableN" id="icono_desplegable_n">
+                <img src="./images/iconoTrianguloDesplegableBlanco.svg" alt="iconoDesplegableB" id="icono_desplegable_b">
+            </button>
+            <div class="interior_desplegable">
+                <a href="./libros.html">LIBROS</a>
+                <a href="./comics.html">CÓMICS/MANGA</a>
+                <a href="./juegos.html">JUEGOS/CARTAS</a>
+            </div>
+        </div>
+
+
+        <a href="./actividades.html">ACTIVIDADES</a>
+        <a href="./libreria.html">LIBRERÍA</a>
+        <a href="./contacto.html">CONTACTO</a>
+    </nav>
+
+
+    <main id="main_libreria">
+        <!-- Main con el div #descripcionLocalizacion para el texto y el div #mapaDiv para el enlace a google maps -->
+        <h2>Librería - Sobre Nosotros</h2>
+        <div class="localizacion_div">
+
+            <div id="descripcion_localizacion">
+                <h5>La Librería</h5>
+                <p>La Esquirla del Larkin es una librería malagueña especializada en literatura fantástica y de ciencia
+                    ficción
+                    y en juegos de mesa. Ven a vernos en Calle Madre Teresa de Calcuta nº 10, 29006, Málaga (Málaga).
+                    Alojamos
+                    eventos y actividades relacionados a la lectura y a juegos de mesa y cartas siempre que podemos y
+                    estaremos encantados
+                    de atenderte cuando vengas.
+                </p>
+                <h6>Horario</h6>
+                <p>Estamos abiertos de 10:00h a 14:00h y de 16:00h a 20:00h de Lunes a Sábado excepto festivos.</p>
+                <h6>Apertura de festivos en 2023</h6>
+                <ul>
+                    <li>Jueves 6 de Abril</li>
+                    <li>Viernes 7 de Abril</li>
+                    <li>Martes 15 de Agosto</li>
+                    <li>Viernes 8 de Septiembre</li>
+                    <li>Jueves 6 de Abril</li>
+                    <li>Viernes 8 de Diciembre</li>
+                </ul>
+
+            </div>
+
+            <div id="mapa_div">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.326212677679!2d-4.442979052975626!3d36.71472600125285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f79dee252a15%3A0xe9e6664274728993!2sC.%20de%20la%20Madre%20Teresa%20de%20Calcuta%2C%2010%2C%2029006%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1699518216804!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div id="mapa_div_movil">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.3262097158763!2d-4.440693789027472!3d36.7147260723983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f79dee252a15%3A0xe9e6664274728993!2sC.%20de%20la%20Madre%20Teresa%20de%20Calcuta%2C%2010%2C%2029006%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1699700118162!5m2!1ses!2ses"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="mapa_div_movil_peque">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.3262097158763!2d-4.440693789027472!3d36.7147260723983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f79dee252a15%3A0xe9e6664274728993!2sC.%20de%20la%20Madre%20Teresa%20de%20Calcuta%2C%2010%2C%2029006%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1699700118162!5m2!1ses!2ses"
+                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+        </div>
+    </main>
+    <footer>
+        <div class="parrafo_footer">
+            <p>
+                Copyright
+                <img src="./images/copyrightBlanco.svg" alt="copyright" id="copyright_icono">
+                2023-2023 La Esquirla del Larkin - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="./javascript/ajax.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+}
+.cabecera{
+    background-color: brown;
+    height: 150px;
+    width: 100%;
+
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion{
+    background-color: brown;
+    height: 25px;
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header > p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-family: 'Pacifico', cursive; 
+    font-size: 50px;
+    color:azure;
+}
+.navegacion > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico', cursive; 
+    font-size: 16px;
+    color:azure;
+}
+
+.imgcabecera{
+    height: 70%;
+}
+
+.efectos{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+.efectos:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.fondo{
+    background-image: url("../images/fondo.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: calc(100vh - 175px);
+    height: calc(100% - 175px) ;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#principal, #contenido {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;   
+    text-align: center;
+
+}
+
+#principal{
+    text-shadow: 2px 2px grey;
+}

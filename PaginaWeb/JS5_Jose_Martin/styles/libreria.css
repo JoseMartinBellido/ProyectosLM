@@ -1,0 +1,203 @@
+/* Variables y ajustes generales */
+:root{
+    /* Grosor 400 fuenteTitulos */
+    --fuenteTitulos: 'Merriweather', serif; 
+    /* Grosor 400 Regular e Italic*/
+    --fuenteTitulosMenores: 'Prompt', sans-serif;
+    /* Regular 400 */
+    --fuenteParrafos: 'EB Garamond', serif;
+
+    --colorPrincipal: #0092FF;
+    --colorPrincipalOscuro: #003761;
+    --colorSecundario:#FF9900;
+    --colorNegro: #000000;
+    --colorBlanco: #ffffff;
+    --colorFondo: #fbfbfb;
+
+    --cursiva: italic;
+}
+
+/* ----------------------------- Reglas de estilo para el main  --------------------------------- */
+
+#main_libreria{
+    flex-direction: column;
+}
+
+main>h2{
+    display: block;
+    margin-top:4vh;
+    margin-left:5vw;
+    margin-bottom: 2vh;
+    font-family: var(--fuenteTitulos);
+    font-size: 1.6rem;
+}
+
+/* Reglas de estilo para localizacionDiv */
+
+.localizacion_div{
+    width:90vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top:3vh;
+    padding-bottom:3vh;
+    
+    margin:auto;
+}
+
+
+#descripcion_localizacion{
+    padding-left:5vw;
+    padding-right:5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-wrap: wrap;
+    text-align: justify;
+
+}
+
+#descripcion_localizacion>h5 {
+    font-family:var(--fuenteTitulosMenores);
+    font-size: 1.6rem;
+
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+
+#descripcion_localizacion>h6 {
+    font-family:var(--fuenteTitulosMenores);
+    font-style: var(--cursiva);
+    font-size: 1.4rem;
+    
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+
+#descripcion_localizacion li, #descripcion_localizacion>p{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.1rem;
+
+    margin-top:0.5vh;
+}
+
+#descripcion_localizacion li{
+    margin-left: 3vw;
+}
+
+/*---------------------------------------- Estilos para 768px - 1024px ----------------------------------------*/
+
+@media (768px < width <= 1024px){
+
+    main{
+        width:100vw;
+    }
+    
+    .localizacion_div{
+        flex-direction: column;
+    }
+
+    #descripcion_localizacion{
+        margin-bottom: 8vh;
+    }
+}
+
+/*---------------------------------------- Estilos para 500px - 768px  ----------------------------------------*/
+
+#mapa_div_movil{
+    display:none;
+}
+
+#mapa_div_movil_peque{
+    display:none;
+}
+
+@media (500px < width <= 768px){
+    
+    main>h2{
+        font-size: 1.4rem;
+    }
+
+    main{
+        width:100vw;
+    }
+
+    .localizacion_div{
+        flex-direction: column;
+    }
+
+    #descripcion_localizacion{
+        margin-bottom: 8vh;
+    }
+
+    #descripcion_localizacion>h5 {
+        font-size: 1.3rem;
+
+    }
+    
+    #descripcion_localizacion>h6 {
+        font-size: 1.1rem;
+
+    }
+    
+    #descripcion_localizacion li, #descripcion_localizacion>p{
+        font-size: 1rem;
+    }
+
+    #mapa_div{
+        display:none;
+    }
+
+    #mapa_div_movil{
+        display:block;
+    }
+}
+
+/*---------------------------------------- Estilos para tamaños menores a 500px  ----------------------------------------*/
+
+@media (width <= 500px){
+    
+    main>h2{
+        font-size: 1.3rem;
+    }
+
+    main{
+        width:100vw;
+    }
+
+    .localizacion_div{
+        flex-direction: column;
+    }
+
+    #descripcion_localizacion{
+        margin-bottom: 8vh;
+    }
+
+    #descripcion_localizacion>h5 {
+        font-size: 1.2rem;
+
+    }
+    
+    #descripcion_localizacion>h6 {
+        font-size: 1rem;
+
+    }
+    
+    #descripcion_localizacion li, #descripcion_localizacion>p{
+        font-size: 1rem;
+    }
+
+    #mapa_div{
+        display:none;
+    }
+
+    #mapa_div_movil_peque{
+        display:block;
+    }
+}

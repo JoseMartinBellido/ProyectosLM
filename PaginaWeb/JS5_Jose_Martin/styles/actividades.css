@@ -1,0 +1,255 @@
+:root{
+    /* Grosor 400 fuenteTitulos */
+    --fuenteTitulos: 'Merriweather', serif; 
+    /* Grosor 400 Regular e Italic*/
+    --fuenteTitulosMenores: 'Prompt', sans-serif;
+    /* Regular 400 */
+    --fuenteParrafos: 'EB Garamond', serif;
+
+    --colorPrincipal: #0092FF;
+    --colorPrincipalOscuro: #003761;
+    --colorSecundario:#FF9900;
+    --colorNegro: #000000;
+    --colorBlanco: #ffffff;
+    --colorFondo: #fbfbfb;
+
+    --cursiva: italic;
+}
+
+/*---------------------------------------- Ajustes para el main de actividades ----------------------------------------*/
+
+#main_actividades{
+    flex-direction: column;
+}
+
+main>h2{
+    display: block;
+    margin-top:5vh;
+    margin-left:5vw;
+    font-family: var(--fuenteTitulos);
+    font-size: 1.6rem;
+}
+
+#contenedor_actividades{
+    width:90vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top:3vw;
+    padding-bottom:3vw;
+    
+    margin:auto;
+
+}
+
+.actividad_div{
+    width: 40vw;
+    height:auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    border: 2px var(--colorNegro) solid;
+    border-radius: 5px;
+    background-color: var(--colorPrincipal);
+    color:var(--colorBlanco);
+    padding:1.5vw;
+    margin: auto;
+
+    margin-bottom:8vh;
+}
+
+.actividad_div h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuenteTitulosMenores);
+    font-size: 1.2rem;
+    height:5rem;
+}
+
+.actividad_div>h4{
+    font-family: var(--fuenteTitulosMenores);
+    font-style: var(--cursiva);
+    font-size:1rem;
+    margin:1vh 0;
+}
+
+.actividad_div>p{
+    text-align: justify;
+    text-wrap: wrap;
+
+    font-family: var(--fuenteParrafos);
+
+    height:8rem;
+}  
+
+.actividad_imagen_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actividad_imagen_div>img{
+    width: 75%;
+    height:auto;
+    border: 2px var(--colorBlanco) solid;
+    border-radius: 5px;
+
+}
+
+/* Div enlacesPaginas para enlazar con más páginas en la búsqueda o en las actividades*/
+
+.enlaces_paginas{
+   width:98vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom:2vh;
+
+}
+
+.enlaces_paginas, .enlaces_paginas a{
+    text-decoration: none;
+    color: var(--colorNegro);
+    font-family: var(--fuenteParrafos);
+    font-size:1.2rem;
+}
+
+.enlaces_paginas a{
+    margin-right: 0.3vw;
+}
+
+
+
+#pagina_marcada{
+    color: var(--colorPrincipal);
+}
+
+/*---------------------------------------- Estilos para 1024px - 1240px ----------------------------------------*/
+
+@media (1024px < width <= 1240px){
+    .actividad_div h3{
+        height:4rem;
+    }
+    
+    .actividad_div>h4{
+        font-size:1.3vw;
+    }
+    
+    .actividad_div>p{
+        height:10rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }  
+}
+
+/*---------------------------------------- Estilos para 768px - 1024px  ----------------------------------------*/
+
+@media (768px < width <= 1024px){
+
+    main{
+        width:100vw;
+    }
+
+    .actividad_div{
+        width: 80vw;
+    }
+
+    .actividad_imagen_div>img{
+        width:65%;
+    }
+
+    .actividad_div h3, .actividad_div>h4{
+        margin-left: 2vw;
+    }
+    
+    .actividad_div h3{
+        height:3rem;
+    }
+
+    .actividad_div>p{
+        height:auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right:2vw;
+        margin-left: 2vw;
+    }  
+}
+
+/*---------------------------------------- Estilos para 540px - 768px ----------------------------------------*/
+
+@media (540px < width <= 768px){
+
+    main{
+        width:100vw;
+    }
+
+    .actividad_div{
+        width: 90vw;
+    }
+
+    .actividad_imagen_div>img{
+        width:65%;
+    }
+
+    .actividad_div h3, .actividad_div>h4{
+        margin-left: 2vw;
+    }
+
+    .actividad_div>p{
+        height:auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right:2vw;
+        margin-left: 2vw;
+    }  
+}
+
+/*---------------------------------------- Estilos para tamaños menores a 540px ----------------------------------------*/
+
+@media (width < 540px){
+
+    main{
+        width:100vw;
+    }
+
+    .actividad_div{
+        width: 90vw;
+    }
+
+    .actividad_imagen_div>img{
+        width:65%;
+    }
+
+    .actividad_div h3, .actividad_div>h4{
+        margin-left: 2vw;
+    }
+    
+    .actividad_div h3{
+        font-size:1.1rem;
+        height:4rem;
+    }
+
+    .actividad_div>h4{
+        font-size:0.95rem;
+    }
+
+    .actividad_div>p{
+        font-size:1rem; 
+        height:auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right:2vw;
+        margin-left: 2vw;
+    }  
+}

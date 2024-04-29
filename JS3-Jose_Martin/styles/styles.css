@@ -1,0 +1,177 @@
+:root{
+    --colorRojo: #FF0000;
+    --colorVerde: #00FF00;
+    --colorAzul: #0000FF;
+    --colorAmarillo: #FFFF00;
+    --colorNegro: #000000;
+    --colorRosa: #FF00FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(32, 61, 37);
+}
+
+.contenido {
+    width: 97.8vw;
+    height: calc(100vh - 12rem - 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(191, 219, 29);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.box {
+    width: 550px;
+    height: 350px;
+    border: 3px groove white;
+    background: #000;
+}
+
+/* CSS para el texto añadido desde javascript y su botón correspondiente */
+.texto{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.6rem;
+    width: 70%;
+    text-align: left;
+    height: 1rem;
+    display: inline;
+}
+
+.boton-desaparece-texto{
+    width: 10rem;
+    height: 2.2rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.boton-desaparece-texto:hover{
+    background-color: rgb(191, 219, 29);
+    transition: 0.4s;
+}
+
+
+/* CSS para la imagen añadida */
+
+#imagen{
+    width:80%;
+    height: 80%;
+    border: 4px black solid;
+    transition: transform 0.5s ease; 
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.imagen-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 20rem;
+    max-height: auto;
+    margin: 2rem;
+}
+
+.imagen-div input{
+    width: 100px;
+}
+
+/* Estilos para el header y título de la página web */
+
+header{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+h1{
+    height: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6rem;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    background-color: rgb(27, 52, 31);
+    color: white;
+}
+
+/* Estilos para el contenedor del párrafo añadido */
+
+#contenedor-parrafo{
+    margin-top: 2rem;
+}
+
+/* Div del reloj y del cuadro de tamaño */
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contenedor div{
+    margin: 1rem;
+}
+
+/* RELOJ */
+
+.div-fecha{
+    border: 2px black solid;
+    border-radius: 5px;
+    color: white;
+    padding: 0.7rem;
+}
+
+#titulo-fecha{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    width: 15rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#titulo-fecha div{
+    width: 15rem;
+    text-align: center;
+}
+
+.texto-fecha {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Div que contendrá el tamaño del mismo al modificarse */
+#cuadro{
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 8rem;
+}
+
+
+

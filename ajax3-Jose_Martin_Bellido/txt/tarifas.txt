@@ -1,0 +1,36 @@
+         <div>
+             <p><span class="titulo">Reserva tu habitación en uno de nuestros hoteles</span><br /><br />
+               <span class="negrita">Situación</span><br />El hotel se 
+               encuentra junto a la Gran Vía de Madrid, a poca distancia 
+               a pie de la Plaza de España y el Palacio Real. 
+               La Plaza de España y de las estaciones de metro de Santo
+               Domingo están a 150 metros. También está bien comunicado
+               con el Triángulo del Arte, el parque del Retiro y el
+               aeropuerto de Madrid Barajas.<br /><br />
+               <span class="negrita">Habitación</span><br /> Hotel Mayorazgo 
+               las elegantes habitaciones disponen de TV de pantalla
+                plana, caja fuerte y minibar.Todas las habitaciones del 
+               hotel son amplias y disponen de aire acondicionado. 
+               Las habitaciones cuentan con plancha pantalones y baño 
+               privado completo con secador de pelo.<br /><br />
+               <span class="negrita">Instalaciones</span><br />El Hotel 
+               Mayorazgo alberga una tienda de regalos y un 
+               mostrador de información turística. El hotel puede 
+               organizar traslados al aeropuerto, servicio de 
+               alquiler de coches y almuerzos para llevar.<br /><br />
+               <span class="negrita">Restaurante</span><br />El Hotel 
+               Mayorazgo alberga un restaurante mediterráneo y 
+               un bar, con un diseño clásico y una fuente 
+               relajante. Hay un elegante piano bar con música en 
+               directo.
+            </p>
+<!-- 
+<p>Hotel en Almería</p>
+            <img src="images/hoteles/9.jpg">
+            <p class="letrahoteles">Hotel situado en primera
+                línea de playa, con todas las comodidades.
+                Muy cerca del centro urbano, con lugares de ocio
+                y restauración únicos en el mundo.</p>
+            <p class="preciohoteles">Precio total: 1500€</p>
+            <p class="condicioneshoteles">NOTA: No incluye excursiones</p>
+ -->        </div>

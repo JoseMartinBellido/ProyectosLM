@@ -1,0 +1,462 @@
+/* ----------- Variables y ajustes generales ----------- */
+
+:root{
+    --fuenteTitulos: 'Athiti', sans-serif;
+    --fuenteParrafo: 'Montserrat', sans-serif;
+    --fuenteDescripcion: 'Mulish', sans-serif;
+
+    --colorPrincipal: #327EAD;
+    --colorPrincipalOscuro: #3D657D;
+    --colorPrincipalMasOscuro:#313F47;
+    --colorPrincipalClaro: #1593E1;
+    --fondoLetra: #2D3133;
+    --colorHeader: rgb(231, 233, 251);
+}
+
+*{
+    margin:0;
+    padding:0;
+
+    /* Se usan las siguientes instrucciones para ocultar la barra de desplazamiento vertical u horizontal. */
+    /* Exclusivamente por el planteamiento de la página como 3 independientes dentro del mismo html */
+    overflow-x: hidden;
+}
+
+body{
+    background-color:var(--colorPrincipal);
+}
+
+/* ----------- Ajuste de los 3 apartados principales ----------- */
+
+
+/* ----------- Header y título compartido por las 3 partes de la página ----------- */
+
+header, .tituloPrincipal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    height: 14vh;
+    background-color: var(--colorHeader);
+    border:1px var(--colorPrincipalOscuro) solid;
+}
+
+
+.tituloPrincipal{
+    width:25vw;
+    font-size: 2vw;
+    font-family: var(--fuenteTitulos);
+    background-color: var(--fondoLetra);
+    color:var(--colorHeader);
+
+    border: 2px var(--colorPrincipalClaro) solid;
+    border-radius:5px;
+
+    margin:auto;
+}
+
+/* ----------- Footer compartido por las 3 partes de la página ----------- */
+
+footer, .piePagina{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1vw;
+}
+
+footer{
+    height: 9vh;
+    background-color: var(--colorHeader);
+    border:1px var(--colorPrincipalOscuro) solid;
+}
+
+.piePagina{
+    margin-left: 10vw;
+}
+
+#copyright{
+    width:1vw;
+    margin-right: 0.5vw;
+}
+
+/* ----------- Main. Sección central ----------- */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main: Dividido en Nav y en Section. Como son 3 distintos, se han definidio 3 divs seccion1, seccion2 y seccion3 */
+
+#seccion2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--colorPrincipalMasOscuro);
+
+
+    border: 2px var(--colorPrincipalOscuro) solid;
+    border-radius: 10px;
+
+    margin:2rem auto;
+    padding: 2vw;
+
+}
+
+
+
+#seccion1, #seccion2, #seccion3{
+    width: 85vw;
+
+    background-image:url("../images/FondoCurva.svg");
+
+}
+
+
+/* ----------- Ajustes específicos de nav ----------- */
+
+/* Estilo para el título del menú de navegación*/
+.tituloNav, .enlaceDiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2vw;
+    color:var(--colorHeader);
+}
+
+.tituloNav{
+    width:16vw;
+    font-family: var(--fuenteTitulos);
+    margin: 1vh auto 3vh auto;
+}
+
+/* Estilos de los divs que contienen el enlace y evento cuando pasamos el ratón por encima */
+
+.enlaceDiv{
+    width:14vw;
+    border-radius: 10px;
+    font-family: var(--fuenteParrafo);
+    background-color: var(--fondoLetra);
+    margin:1.5vh 3vw;
+    padding:1.6vh;
+
+    text-decoration: none;
+
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+.enlaceDiv:hover{
+    background-color: var(--colorHeader);
+    color:var(--colorPrincipalMasOscuro);
+
+    width:14.5vw;
+    font-size:1.4vw;
+
+    padding:2vh;
+}
+
+/* Distinguimos como marcado la página donde nos encontremos */
+
+.marcado{
+    color:var(--colorPrincipalClaro);
+}
+
+/* Iconos de la navegación */
+
+.iconosNav{
+    width:3vw;
+    margin: 5vh 1vw 1vh 1vw;
+}
+
+
+/* ----------- Ajustes del primer formulario -----------*/
+
+/* seccion2 con su estructura básica ya definida */
+
+#seccion2{
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+}
+
+/* Div exterior que contiene imagen (icono) y estructura de 1 label, 1 input y descripción */
+
+.exteriorForm{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:2vh 2vw;
+    margin: auto;
+}
+
+/* Div interior al formulario que contiene estructura de label, 1 o más inputs y una descripción opcional */
+
+.formDiv {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 28vw;
+    margin: auto;
+    padding:1.5vh 2vw;
+
+    border-radius: 10px;
+
+    background-color: var(--fondoLetra);
+    color:var(--colorHeader);
+
+    font-family: var(--fuenteParrafo);
+    font-size: 1.1vw;
+}
+
+
+/* Estilos de inputs y reacción al pasar el ratón por encima y al tener el foco */
+
+.formDiv>input, .formDiv>textarea{
+    background-color: var(--fondoLetra);
+    border: 1.5px var(--colorHeader) solid;
+    border-radius: 10px;
+    margin-left:1vw;
+    margin-bottom:1.2vh;
+    width:10vw;
+
+    color:var(--colorHeader);
+    padding:0.4vw;
+
+    transition-duration: 1.2s;
+    transition-timing-function: ease;
+}
+
+.formDiv>input:hover, .formDiv>input:focus{
+    width:15vw;
+    border: 3px var(--colorPrincipalClaro) solid;
+
+}
+
+/* Estilos de descripciones (párrafos y consentimiento de privacidad), los iconos y el id botonEnviar */
+
+.formDiv>p{
+    font-family: var(--fuenteDescripcion);
+    font-size: 0.8vw;
+}
+
+.politicaPrivacidad{
+    display: flex;
+    justify-content: center;
+    margin-left: 2vw;
+}
+
+#privacidadLabel{
+    font-family: var(--fuenteDescripcion);
+    font-size: 0.8vw;
+    color: var(--colorHeader);
+    margin-left:0.5vw;
+    width: 28vw;
+    margin: auto 6vw;
+}
+
+#privacidadLabel:hover{
+    color:var(--colorPrincipalClaro);
+}
+
+.iconoArchivo{
+    width:2vw;
+    margin-right:1vw;
+}
+
+#botonEnviar{
+    margin-left:10vw;
+    margin-bottom:1vh;
+    width:11vw;
+    height:6vh;
+
+    border:2px var(--colorPrincipal) solid;
+    border-radius: 10px;
+
+    font-family: var(--fuenteParrafo);
+    font-size: 1vw;
+    font-weight: 800;
+ 
+    background-color: var(--fondoLetra);
+    color: white;
+}
+
+#botonEnviar:hover{
+    background-color: var(--colorPrincipalClaro);
+    color: var(--fondoLetra);
+}
+
+/* ----------- Ajustes del segundo formulario -----------*/
+
+/* seccion3 y formDiv con su estructura básica ya definida */
+
+#seccion3{
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+}
+
+
+.formDiv>textarea:hover{
+    border: 3px var(--colorPrincipalClaro) solid;
+
+}
+
+/* Ajustes de la pregunta hobby */
+
+#hobbyDiv{
+    width: 28vw;
+}
+
+#hobbyInput{
+    margin-left: 1vw;
+}
+
+#hobbyInput:hover, #hobbyInput:focus{
+    width:10vw;
+}
+
+/* Ajustes de la fecha de comienzo del hobby */
+#fechaComienzoDiv{
+    width:28vw;
+}
+
+#fechaComienzoInput:hover, #fechaComienzoInput:focus{
+    width:10vw;
+}
+
+/* Estilos para el div de radiobutton */
+
+#compartirHobbyDiv{
+    width:28vw;
+}
+
+#tituloRadio{
+    margin:0.8vh 0 1.2vh 0;
+}
+
+.radios{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.radios>input{
+    margin-right:0.5vw;
+    margin-left:0.8vw;
+    width:1vw;
+
+    color:var(--colorHeader);
+}
+
+.radios>label{
+    font-family: var(--fuenteDescripcion);
+    font-size: 0.9vw;
+    margin-right: 1.5vw;
+    margin-bottom:1vh;
+}
+
+
+.radioLabel:hover{
+    color: var(--colorPrincipalClaro);
+}
+
+/* Estilos para el select */
+
+#selectDiv{
+    width:28vw;
+}
+
+#nuevaAficionSelect{
+    background-color: var(--fondoLetra);
+    color:var(--colorHeader);
+
+    border-radius: 10px;
+    padding:0.3vh;
+    margin: 0.7vw 2vw;
+
+    width:16vw;
+
+    transition-duration: 1.2s;
+    transition-timing-function: ease;
+}
+
+#nuevaAficionSelect:hover, #nuevaAficionSelect:focus{
+    border: 3px var(--colorPrincipalClaro) solid;
+}
+
+/* Estilos para el checkbox */
+
+#lenguajesProgramacionDiv{
+    justify-content: flex-start;
+
+    width:28vw;
+}
+
+#tituloCheckbox{
+    font-family: var(--fuenteParrafo);
+    font-size: 1.1vw;
+    margin:2vh 1vw 1.5vh 0;
+}
+
+/* Div global para todos los checkbox + label */
+.checkBoxDiv{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 0.2vh 1vw;
+}
+/* Tuplas checkbox + label específicas, asignando estructura por pares */
+.opcionBox{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:0.4vw;
+
+    width: 7vw;
+}
+
+.checkLabel{
+    margin: 0.3vh 0.6vw 0.3vh 0.6vw;
+    font-family: var(--fuenteDescripcion);
+    font-size: 0.9vw;
+}
+
+.checkLabel:hover{
+    color: var(--colorPrincipalClaro);
+}
+
+/* Estilos para el buzón de sugerencias*/
+
+#buzonSugerenciasDiv{
+    width:28vw;
+}
+
+#tituloBuzonSugerencias{
+    margin-top: 0.5vh;
+}
+
+#buzonSugerenciasText{
+    height:13vh;
+    width:20vw;
+    margin-top:1vh;
+    padding: 0.5vh 0.5vw;
+
+    text-align: justify;
+
+}
+
+.titulo-enviado{
+    font-size: 2rem;
+    color:white;
+}
