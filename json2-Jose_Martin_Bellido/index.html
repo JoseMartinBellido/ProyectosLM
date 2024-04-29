@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="principal">
+        <h1 class="titulo-principal">¡Bienvenid@ al Trivial!</h1>
+
+        <form action="./trivial.php" method="post" id="formulario-inicio">
+            <label for="numero-preguntas">Indica el número de preguntas que deseas (de 1 a 50):</label>
+            <input type="number" name="numero-preguntas" id="numero-preguntas" placeholder="Ej: 10">
+            <p id="texto-error">El número de preguntas debe ser un número entre 1 y 50</p>
+
+            <label for="dificultad" id="selector-dificultad">Dificultad de las preguntas: </label>
+            <select name="dificultad" id="dificultad">
+                <option value="easy">Fácil</option>
+                <option value="medium">Media</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <input type="submit" id="btn-enviar" value="Enviar">
+        </form>
+
+        <script src="./javascript/principal.js"></script>
+    </main>
+</body>
+</html>
