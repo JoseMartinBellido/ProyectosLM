@@ -55,11 +55,11 @@ main{
     gap: 2vh;
 }
 
-#selector-dificultad{
+label{
     margin-top: 3vh;
 }
 
-#selector-dificultad option {
+select option{
     font-weight: 600;
 }
 

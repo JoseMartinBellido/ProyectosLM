@@ -1,17 +1,56 @@
 
 // Se obtienen los elementos para solicitar las preguntas
 let cookies = document.cookie.split(';');
-let numPreguntas;
-let dificultad;
+let numPreguntas = getCookie('numPreguntas');
+let dificultad = getCookie('dificultad');
+let tematica = getCookie('tematica');
+console.log(cookies);   
 
-if (cookies[0].split('=')[0] == 'numPreguntas') {
-    numPreguntas = cookies[0].split('=')[1];
-    dificultad =  cookies[1].split('=')[1];
+// Función para obtener la cookies
+function getCookie(cookieName) {
+    let decodedCookie = decodeURIComponent(document.cookie);
 
-} else {
-    numPreguntas = cookies[1].split('=')[1];
-    dificultad =  cookies[0].split('=')[1];
+    let cookiesArray = decodedCookie.split('; ');
+
+    // Se recorren las cookies buscando la igualdad 
+    for(let i = 0; i < cookiesArray.length; i++) {
+      let cookie = cookiesArray[i];
+
+      if (cookie.split('=')[0].includes(cookieName)){
+        return cookie.split('=')[1];
+      }
+    }
+    // Si llega hasta aquí, no hay cookie con ese nombre
+    return "";
+  }
+
+// Se modifica el título según la temática
+let titulo = document.getElementById('titulo-trivial');
+let tematicas = {
+    '9' : 'Cultura general',
+    '10' : 'Libros',
+    '11' : 'Películas',
+    '12' : 'Música', 
+    '13' : 'Musicales y Teatro',
+    '14' : 'Televisión',
+    '15' : 'Videojuegos',
+    '16' : 'Juegos de mesa',
+    '17' : 'Ciencia y Naturaleza',
+    '18' : 'Informática',
+    '19' : 'Matemáticas',
+    '20' : 'Mitología',
+    '21' : 'Deportes',
+    '22' : 'Geografía',
+    '23' : 'Historia',
+    '25' : 'Arte',
+    '27' : 'Animales',
+    '28' : 'Vehículos',
+    '29' : 'Comics',
+    '30' : 'Ciencia: Inventos',
+    '31' : 'Anime y Manga',
+    '32' : 'Dibujos animados',
 }
+titulo.innerHTML = 'Trivial - ' + tematicas[tematica];
 
 // Variables necesarias para el programa
 let main = document.getElementById('trivial');
@@ -23,7 +62,7 @@ let respuestasIncorrectas = [];
 let pregunta, radioDoc, labelDoc;
 
 // Acceso a la api
-let url = `https://opentdb.com/api.php?amount=${numPreguntas}&difficulty=${dificultad}`;
+let url = `https://opentdb.com/api.php?amount=${numPreguntas}&category=${tematica}&difficulty=${dificultad}`;
 
 let xhttp = new XMLHttpRequest();
 xhttp.open('GET', url);
@@ -50,8 +89,6 @@ xhttp.onreadystatechange= function  () {
             respuestas = respuestas.sort((a, b) => 0.5 - Math.random());
 
             printRespuestas(data, i, respuestas);
-            
-            console.log(respuestas);
         }
 
         // Se añade un botón para ver las respuestas

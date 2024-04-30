@@ -19,7 +19,7 @@
     ?>
 
     <main id="trivial">
-        <h1 class="titulo-principal">Trivial</h1>
+        <h1 class="titulo-principal" id="titulo-trivial">Trivial</h1>
 
 
     </main>

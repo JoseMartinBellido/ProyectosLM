@@ -5,6 +5,7 @@ const btnEnviar = document.getElementById('btn-enviar');
 const selectorDificultad = document.getElementById('selector-dificultad');
 const inputNumeroPreguntas= document.getElementById('numero-preguntas');
 const dificultad = document.getElementById('dificultad');
+const tematica = document.getElementById('tematica');
     
 // Evita el redireccionamiento por un número de preguntas erróneo
 btnEnviar.addEventListener('click', (event) => {
@@ -18,6 +19,8 @@ btnEnviar.addEventListener('click', (event) => {
     } else {
         document.cookie= "numPreguntas=" + inputNumeroPreguntas.value;
         document.cookie = "dificultad=" + dificultad.value;
+        document.cookie = "tematica=" + tematica.value;
+
     }
 })
 
